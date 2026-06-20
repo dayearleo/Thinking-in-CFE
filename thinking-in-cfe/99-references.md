@@ -195,12 +195,50 @@
   eprint  = {1410.0932}
 }
 
-@article{Hance2025MultiObject,
-  author = {Hance, Jonte R. and others},
+@article{FrancoCamilliniGalvao2026MultiObject,
+  author = {Franco, Sara and Camillini, Anita and Galv{\~a}o, Ernesto F.},
   title  = {Interaction-free measurement of multiple objects using a universal integrated photonic processor},
-  year   = {2025},
+  year   = {2026},
+  month  = apr,
   archivePrefix = {arXiv},
-  eprint = {2604.04691}
+  eprint = {2604.04691},
+  primaryClass = {quant-ph},
+  note = {16 pages, 18 figures. Experimental realization on Quandela Ascella cloud-based photonic processor. Sequential interaction-free measurement up to 5 objects using a single photon probe.},
+  url = {https://arxiv.org/abs/2604.04691}
+}
+
+@phdthesis{Hance2023PhDthesis,
+  author = {Hance, Jonte R.},
+  title  = {The interplay between quantum foundations and quantum technologies: Counterfactual communication, and extensions of quantum mechanics},
+  school = {University of Bristol},
+  year   = {2023},
+  month  = mar,
+  type   = {{PhD} Thesis},
+  url    = {https://hdl.handle.net/1983/a3cf0e59-31a9-456f-800e-cd3b6533461b}
+}
+
+@article{FrumkinBush2023,
+  author = {Frumkin, Valeri and Bush, John W. M.},
+  title  = {Misinference of interaction-free measurement from a classical system},
+  journal = {Physical Review A},
+  volume = {108},
+  number = {6},
+  pages  = {L060201},
+  year   = {2023},
+  doi    = {10.1103/PhysRevA.108.L060201}
+}
+
+@article{HanceLadymanRarity2021,
+  author = {Hance, Jonte R. and Ladyman, James and Rarity, John},
+  title  = {How Quantum is Quantum Counterfactual Communication?},
+  journal = {Foundations of Physics},
+  volume  = {51},
+  number  = {1},
+  pages   = {12},
+  year    = {2021},
+  doi     = {10.1007/s10701-021-00412-5},
+  archivePrefix = {arXiv},
+  eprint = {1909.07530}
 }
 ```
 

@@ -8,7 +8,7 @@
 
 ## 如何阅读
 
-本文按 GitHub-friendly 方式**分片为 15 个文件**,每个文件聚焦一个主题,独立可读。建议按以下路径:
+本文按 GitHub-friendly 方式**分片为 19 章 + README + 99-references** 共 21 个 Markdown 文件 · 每个文件聚焦一个主题 · 独立可读。建议按以下路径:
 
 | 路径 | 章节 | 适合谁 |
 |---|---|---|
@@ -56,6 +56,7 @@
 ## 版本
 
 - **v0.1** · 2026-06-19 · 初稿 · 15 篇章节 · 中文 · 待英译
+- **v0.2** · 2026-06-20 · 扩展至 19 章 (含 §13 RFC + §14 突破证明 + §15 密码学 mental shift + §16 17 算法 audit + §17 同构方法论 + §18 audit report) · 完成 230 claim 全审 (audit/) + supplements/17-audit-master-log/ mirror · 物理 caveat 落地 (commit ab8aba4 + 9d83bb6) · 3 个 attribution cite key 修复
 
 ## 关联工作 (项目内部 dev-notes)
 

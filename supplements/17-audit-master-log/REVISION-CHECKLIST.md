@@ -293,7 +293,7 @@ simulator 数字 (例 1000 trials 96% extraction rate) 在 R2 violation 任意�
 
 ## 5 · 🧹 Cleanup (3 项 · 跟 hook 提示一致)
 
-### 🧹 C-1 · §11.2 CAVEAT 5/6 顺序错 swap
+### ✅ C-1 · §11.2 CAVEAT 5/6 顺序错 swap (DONE)
 
 **问题** (hook 提示):commit 9d83bb6 把 CAVEAT 6 插到 CAVEAT 5 之前 · 顺序成了 6 → 5 · 应 swap 回 5 → 6。
 
@@ -301,7 +301,7 @@ simulator 数字 (例 1000 trials 96% extraction rate) 在 R2 violation 任意�
 
 **工作量**:1 swap (cut + paste)
 
-### 🧹 C-2 · §99 BibTeX stale "Hance2025MultiObject" entry 修
+### ✅ C-2 · §99 BibTeX stale "Hance2025MultiObject" entry 修 (DONE · 加 4 个新 BibTeX)
 
 **问题** (hook 提示):commit ab8aba4 修了 §99 prose entry · 但 BibTeX 块还有 stale `Hance2025MultiObject` (author "Hance, Jonte R. and others" · eprint 2604.04691) 没改。
 
@@ -311,7 +311,7 @@ simulator 数字 (例 1000 trials 96% extraction rate) 在 R2 violation 任意�
 
 **工作量**:1 BibTeX entry · ~10 行
 
-### 🧹 C-3 · README abstract "分片为 15 个文件" 现 19 章 update
+### ✅ C-3 · README abstract "分片为 15 个文件" 现 19 章 update (DONE · 加 v0.2 版本说明)
 
 **问题** (hook 提示):`thinking-in-cfe/README.md` abstract 段当前写 "分片为 15 个文件" · 论文已扩到 19 章 (含 §18 audit-report)。
 
