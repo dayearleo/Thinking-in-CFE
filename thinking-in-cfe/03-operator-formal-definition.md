@@ -10,7 +10,7 @@
 
 $$O_i : |b\rangle \otimes |a\rangle_{\text{anc}} \;\mapsto\; |b\rangle \otimes |a \oplus x_i\rangle_{\text{anc}}$$
 
-设 $\hat{O}_i$ 是 $O_i$ 的 **counterfactual 变种** · 做"是否会触发"的物理探测 · 但实际触发概率被压到 $\leq \delta$。$\hat{O}_i$ 的物理实现通常基于 Quantum Zeno 链式 Mach-Zehnder 配置 [Kwiat 1995] · 详见 [Hance 2025] 的集成芯片实现。
+设 $\hat{O}_i$ 是 $O_i$ 的 **counterfactual 变种** · 做"是否会触发"的物理探测 · 但实际触发概率被压到 $\leq \delta$。$\hat{O}_i$ 的物理实现通常基于 Quantum Zeno 链式 Mach-Zehnder 配置 [Kwiat 1995] · 详见 [Franco-Camillini-Galvão 2026] 的集成芯片实现。
 
 设 $f: \{0,1\}^N \to \{0,1\}$ 是任意 Boolean 函数。
 
@@ -123,15 +123,36 @@ counterfactual_eval(
 
 ## 3.9 · 物理实现要点摘要
 
-详 [Hance 2025] · [Filatov-Auzinsh 2024]。本论文需要的实现层最小集合:
+详 [Franco-Camillini-Galvão 2026] · [Filatov-Auzinsh 2024] · [Calafell et al. 2019]。本论文需要的实现层最小集合:
 
-- N-mode 集成 photonic interferometer (Si / SiN / 飞秒激光写入)
-- 可切换 absorber (电吸收调制器 EAM) 作为 obstacle 物理实现
-- 单光子源 (heralded SPDC 或 III-V QD)
-- 单光子探测器 (SNSPD 阵列)
+- N-mode 集成 photonic interferometer (SOI silicon-on-insulator / SiN / 飞秒激光写入)
+- 可切换 obstacle 实现 · 多种 candidate:
+  - 电吸收调制器 (EAM)
+  - thermo-optic phase shifters + SWAP gates (Calafell 2019 实测路径)
+  - tunable BS reflectivity (Franco 2026 实测路径)
+- 单光子源 (heralded SPDC · 1565 nm telecom band · 或 III-V QD)
+- 单光子探测器 (SNSPD 阵列 · ~90% detection efficiency)
 - Quantum Zeno effect 加深 + chained interferometer 提升反事实效率
 
-**SOTA**:N = 12 universal photonic processor 已 lab proven · 端到端 5 dB loss · counterfactual efficiency 单链路 > 99%。
+**SOTA · 精确化** (2026 年 4 月数据):
+
+| 维度 | SOTA 数字 | Source |
+|---|---|---|
+| Universal photonic processor mode 数 | **12 modes** (Quandela Ascella cloud-accessible) | Franco-Camillini-Galvão 2026 |
+| Multi-object IFM 实测 object 数 | **N = 5 sequential** (single quantum probe) | Franco-Camillini-Galvão 2026 |
+| Chained CFC (Salih scheme) 实测 N | **N = 6 max** (chip-layout-limited) | Calafell et al. 2019 |
+| Single MZI visibility | **99.94%** average | Calafell et al. 2019 |
+| Insertion loss per facet | **3 dB** | Calafell et al. 2019 |
+| Heralding efficiency (SPDC) | **~3%** | Calafell et al. 2019 |
+| SNSPD detection efficiency | **~90%** at telecom 1565 nm | photonSpot via Calafell 2019 |
+| Chained N=6 bit success rate | **99% with M=320 photons per bit** · CFC violation 2.4% | Calafell et al. 2019 |
+
+**重要 caveats** (跟早期论文版本 N=12 / 5 dB loss / >99% 等数字的对比 · 详 §11):
+
+- N=12 是 platform mode 数 (hardware capability) · **不是 multi-object IFM 实测 object 数** (后者目前 SOTA N=5)
+- "5 dB loss" 是 per-facet · system end-to-end success rate ~ few % (受 heralding + chip transmission + detection 累乘 dominated)
+- "> 99% efficiency 单链路" 指 single MZI visibility (99.94%) · chained protocol 整体 bit success rate 需 M photons per bit 编码才能达到
+- Multi-object IFM efficiency 随 n 快速衰减:Franco 2026 verbatim "η is in general a quickly decaying function of n"
 
 ## 3.10 · 限界
 

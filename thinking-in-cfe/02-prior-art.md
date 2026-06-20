@@ -29,9 +29,9 @@ IFM/counterfactual 思想在过去 30 余年沿三条互相交叉的线发展:
 |---|---|---|
 | [Hosten 2006] · "Counterfactual quantum computation through quantum interrogation" · Nature 439 | 桌面光学 + 偏振 | 第一次实物反事实计算 |
 | [Kong 2015] · PRL 115.080501 · "Experimental Realization of High-Efficiency Counterfactual Computation" | 桌面光学 | 效率 > 99% |
-| [Hance 2019] · npj Quantum Info · "Trace-free counterfactual communication with a nanophotonic processor" | SiN 集成芯片 | bit error < 1% · 多步 Zeno |
+| [Calafell et al. 2019] · npj Quantum Info · "Trace-free counterfactual communication with a nanophotonic processor" | SiN 集成芯片 | bit error < 1% · 多步 Zeno |
 | [Kang 2020] · npj Quantum Info · "Temporal Wheeler's delayed-choice based on cold atomic quantum memory" | Rb 冷原子 | Wheeler 在量子存储介质上跑通 |
-| [Hance 2025] · arxiv 2604.04691 · "Interaction-free measurement of multiple objects using a universal integrated photonic processor" | ASCE cloud chip | **多对象 IFM 实物 · 直接对应本文 §3 算子** |
+| [Franco-Camillini-Galvão 2026] · arxiv 2604.04691 · "Interaction-free measurement of multiple objects using a universal integrated photonic processor" | ASCE cloud chip | **多对象 IFM 实物 · 直接对应本文 §3 算子** |
 | [Shwartz 2025] · "Loss-resilient x-ray interaction-free measurements" | X-ray + crystal | IFM 推到 x-ray regime |
 | [集成多路 delayed-choice] · Nat Commun 2021 (PMC 8105384) | nanophotonic chip | N = 8 路 multipath delayed-choice |
 
@@ -83,7 +83,7 @@ IFM/counterfactual 思想在过去 30 余年沿三条互相交叉的线发展:
 
 | 工作 | 跟本论文关系 |
 |---|---|
-| [Hance 2025] · Multi-object IFM on integrated chip | **直接对应本文 §3 单算子的物理实现** · 我们抽象的算子他们做了物理实现 |
+| [Franco-Camillini-Galvão 2026] · Multi-object IFM on integrated chip | **直接对应本文 §3 单算子的物理实现** · 我们抽象的算子他们做了物理实现 |
 | [Filatov-Auzinsh 2024] · Setup for multi-object IFM | **本文 §3 算子的物理协议来源** |
 | [Shwartz 2025] · x-ray IFM | 扩展物理 platform · 跟本文正交 (我们不限定波长) |
 | [Quantum causal counterfactuals 2024] | 不同范畴 (因果推断 vs 计算原语) · 不冲突 |

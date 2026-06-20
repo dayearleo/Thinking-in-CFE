@@ -35,10 +35,11 @@
 - **问题描述**:稀缺单细胞或单分子 · 想测 N 种 property · 经典每次测都破坏样本 · 一个样本只能测 3-5 次
 - **原 QC 方案**:量子-enhanced microscopy + FT QC 信号处理 · 长期目标
 - **CFE 方案**:N 波长 / polarization probe 并行 · 用 $\Phi^{CF}_{\text{COUNT}}$ + $\Phi^{CF}_{\text{LOC}}$ 测每个 property · 大部分 probe 不真触发 photo-bleaching
-- **Cost 对比**:经典 = 一次性消耗;CFE = 同一样本测 N 个 property (N 可能 20-50)
+- **Cost 对比**:经典 = 一次性消耗;CFE = 同一样本测 N 个 property
+- **⚠️ SOTA caveat (物理审计 2026-06-20)**:**当前 multi-object IFM 实测 N=5 sequential** [Franco 2026]。"N 可能 20-50" 是理论上限 · 不是当前可达。η(n) 随 n 快速衰减 [Franco verbatim]。Niche 当前应聚焦 **N $\leq$ 10** 场景 (例如 5 种 binding affinity assay 而非 50 种)
 - **为什么 FT QC 也做不到**:FT QC 必须先测样本 → 破坏 → 反事实性丢光。这是 §5 D3 超越点
-- **优先级**:⭐⭐⭐⭐⭐
-- **独占性**:**永久独占**
+- **优先级**:⭐⭐⭐⭐⭐ (D3 优势永久独占) · ⭐⭐⭐ (N 数 scaling 是 open challenge)
+- **独占性**:**永久独占** (但 N 数受当前硬件限)
 
 ### A3 · 光毒性敏感样本显微 + 分类
 
@@ -46,6 +47,7 @@
 - **原 QC 方案**:Quantum-enhanced metrology + FT QC ML 后处理 · 长期目标
 - **CFE 方案**:Undetected photons imaging + 反事实多对象 IFM · 光强降 10-100×
 - **Cost 对比**:经典 = 接受 photo-damage 或牺牲分辨率;CFE = 同样信息 + $1/10$-$1/100$ 光剂量
+- **⚠️ SOTA caveat**:光强降 10-100× 是 Kwiat 1995 高效率 IFM 理论极限。实测 Calafell 2019 single MZI visibility 99.94% · chained N=6 时 violation 2.4% · 实际 photo-damage 抑制 ratio 取决于 chained 阶数 + 应用细节
 - **已有商业**:QuantIC consortium / Quantum Optical Systems 已有产品。本工作角度是把"反事实分类"加进去 · 不只是成像
 - **优先级**:⭐⭐⭐⭐
 - **独占性**:已成熟 niche · 分类应用还有空间
@@ -56,9 +58,10 @@
 - **原 QC 方案**:Quantum radar (实验阶段) · FT QC 信号处理
 - **CFE 方案**:$\Phi^{CF}_{\text{OR}}$ + 物理耦合 (EM / optical probe) · 反事实探测 · 对手物理上检测不到
 - **Cost 对比**:经典暴露 = 损失情报优势;CFE 不暴露 = 保情报。是 **capability 比较不是 cost 比较**
+- **⚠️ SOTA caveat**:adversary undetectable 是 $\delta \to 0$ 极限。Calafell 2019 实测 CFC violation **2.4%** (N=6, M=320) · 即对手有 ~2-3% 概率察觉。R2 实际是 "bounded adversary observability" · 不是绝对 0。多对象 stealth probing N 限制同 A2 (实测 N=5 max)
 - **为什么 FT QC 也做不到**:同 §5 D1.b · adversary-undetectable 超越点
 - **优先级**:⭐⭐⭐
-- **独占性**:**永久独占**
+- **独占性**:**永久独占** (但 violation rate finite)
 
 ### A5 · 半导体晶圆 in-line 缺陷扫描
 

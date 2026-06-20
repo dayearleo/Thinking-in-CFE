@@ -34,9 +34,9 @@
 
 **[Kong 2015]** · F. Kong, C. Ju, P. Huang, P. Wang, X. Kong, F. Shi, L. Jiang, J. Du · "Experimental Realization of High-Efficiency Counterfactual Computation" · *Phys. Rev. Lett.* 115 · 080501 · 2015 · doi:10.1103/PhysRevLett.115.080501
 
-**[Hance 2019]** · J. R. Hance et al. · "Trace-free counterfactual communication with a nanophotonic processor" · *npj Quantum Information* 5 · 2019 · doi:10.1038/s41534-019-0179-2
+**[Calafell et al. 2019]** · I. Alonso Calafell, T. Strömberg, D. R. M. Arvidsson-Shukur, L. A. Rozema, V. Saggio, C. Greganti, N. C. Harris, M. Prabhu, J. Carolan, M. Hochberg, T. Baehr-Jones, D. Englund, C. H. W. Barnes, P. Walther · "Trace-free counterfactual communication with a nanophotonic processor" · *npj Quantum Information* 5:61 · 2019 · doi:10.1038/s41534-019-0179-2 (cite key 修正:2026-06-20 audit · 早期论文版本 cite 为 [Hance 2019] · 但 Hance 不在 14 名作者列表 · 第 1 作者是 Calafell)
 
-**[Hance 2025]** · J. R. Hance et al. · "Interaction-free measurement of multiple objects using a universal integrated photonic processor" · arxiv:2604.04691 · 2025 · https://arxiv.org/abs/2604.04691
+**[Franco-Camillini-Galvão 2026]** · Sara Franco, Anita Camillini, Ernesto F. Galvão · "Interaction-free measurement of multiple objects using a universal integrated photonic processor" · arxiv:2604.04691 · 2026-04-06 · https://arxiv.org/abs/2604.04691 · 16 pages 18 figures · International Iberian Nanotechnology Laboratory (INL) + Centro de Física Universidade do Minho (cite key 修正:2026-06-20 audit · 早期论文版本 cite 为 [Hance 2025] · 实际作者是 Franco-Camillini-Galvão · year 是 2026 不是 2025 · 实测 sequential IFM up to 5 objects on Quandela Ascella cloud)
 
 ### D · 反事实通信
 
@@ -122,7 +122,7 @@
 
 **[Dunning 1989]** · D. Dunning, L. B. Parpal · "Mental Addition Versus Subtraction in Counterfactual Reasoning" · 1989
 
-**[Yang 2026]** · "Thinking by Subtraction: Confidence-Driven Contrastive Decoding for LLM Reasoning" · arxiv:2602.18232 · 2026
+**[Tang et al. 2026]** · Lexiang Tang, Weihao Gao, Bingchen Zhao, Lu Ma, Qiao Jin, Bang Yang, Yuexian Zou · "Thinking by Subtraction: Confidence-Driven Contrastive Decoding for LLM Reasoning" · arxiv:2602.18232 [cs.CL] · 2026-02-20 (cite key 修正:2026-06-20 audit · 早期论文版本 cite 为 [Yang 2026] · 实际第 1 作者是 Tang · Yang 是第 6 作者)
 
 **[Wachter 2017]** · S. Wachter, B. Mittelstadt, C. Russell · "Counterfactual explanations without opening the black box" · 2017
 

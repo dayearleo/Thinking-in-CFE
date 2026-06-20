@@ -15,21 +15,78 @@ CFE 算子 (§3) 不能做的事:
 | 不替代量子计算 | 算子针对查询代价问题 · 不是计算复杂度问题 |
 | 不在 NISQ era 立即工程化大规模 | 需要稳定多模 photonic chip + 高 fidelity probes |
 
-## 11.2 · 硬件层限界
+## 11.2 · 硬件层限界 (基于 §03.9 精确化 SOTA + 物理审计 finding)
 
-当前 SOTA (2024-2025) 的硬件参数:
+当前 SOTA (2026-04 数据 · 经物理审计验证):
 
-| 维度 | 当前可达 | 限制因素 |
+| 维度 | 当前可达 (精确化) | 限制因素 |
 |---|---|---|
-| Photonic mode 数 $N$ | $\leq$ 12-32 集成 universal | 累积 loss / phase 漂移 / fab 良率 |
-| End-to-end loss | $\sim$ 5 dB (12-mode SiN) | 在 N=100 累积成 $\sim 50$ dB 不可用 |
-| Counterfactual efficiency | 单链路 $> 99\%$ · 多对象 $\sim 75\%$ | Zeno 阶数有限 |
-| Visibility (干涉对比度) | $> 95\%$ on chip | $\delta$ 下限由 visibility 限制 |
+| Universal photonic processor mode 数 | **12 modes** (Quandela Ascella cloud) [Franco 2026] | 累积 loss / phase 漂移 / fab 良率 |
+| **Multi-object IFM 实测 object 数** | **N=5 sequential** (single quantum probe) [Franco 2026] | η(n) 随 n 快速衰减 (Franco verbatim) |
+| Chained CFC 实测 N | **N=6 max** (chip-layout-limited) [Calafell 2019] | 物理 chip 设计 |
+| Single MZI visibility | **99.94%** average [Calafell 2019] | thermo-optic phase shifter precision |
+| Insertion loss per facet | **3 dB** [Calafell 2019] | SOI coupling efficiency |
+| Heralding efficiency (SPDC) | **~3%** [Calafell 2019] | SPDC nonlinear conversion + coupling |
+| SNSPD detection efficiency | **~90%** at 1565 nm [Calafell 2019] | 跟 cryogenic 一起的 trade-off |
+| Chained N=6 bit success rate | **99% with M=320 photons per bit** · CFC violation 2.4% [Calafell 2019] | 整体 protocol fidelity 累乘 |
 | 工作温度 | SNSPD 需 cryogenic 1-4 K | 探测器替代品 SPAD 效率掉 30-50% |
 | Photon source 速率 | 1-100 MHz | 不是瓶颈 |
-| 切换速度 (EAM) | GHz | 不是瓶颈 |
+| 切换速度 (thermo-optic) | 130 kHz [Calafell 2019] | thermal time constant |
 
-**核心瓶颈**:loss + visibility · 决定 $N$ 上限 · 当前 $N$ 上限约 30-50 在实物可行 · 远低于很多算法理论上要求的 $10^6+$。
+### 5 个物理 CAVEAT (审计 2026-06-20 落地 · 跟早期声明的 reconciliation)
+
+**CAVEAT 1 · multi-object IFM efficiency 快速衰减**
+
+Franco 2026 verbatim:**"η is in general a quickly decaying function of n"**。意味着 §10 A2/A3/A4 的 N=20+ 假设 over-stated。**当前 SOTA N=5** · scaling to N=20+ 需要:
+
+- exponential resource scaling (fully overlapping scheme $2^{n-1}$)
+- 或 linear scaling 但 efficiency 极低 (Franco non-overlapping)
+- 或 manipulate 多 degrees of freedom (Filatov-Auzinsh temporal encoding)
+
+§10 应用 niche **当前应聚焦 N $\leq$ 10 场景** · N=20+ 是 open engineering challenge。
+
+**CAVEAT 2 · CFC violation 不是 0**
+
+Calafell 2019 实测 N=6, M=320 时 CFC violation **2.4%**。R2 "adversary undetectable" claim (§5.2 / §15) 应改为 "**bounded** adversary observability complexity $\eta$ · 不是绝对 0"。
+
+精确表述:$\eta = (1 - \text{visibility})^N \cdot k$ for some constant · 在 N=6, visibility 99.94% 时 $\eta \sim 0.024$。
+
+**CAVEAT 3 · Salih 2013 protocol scaling 限制**
+
+Calafell 2019 引述:**"Salih scheme requires thousands of optical elements to achieve >95% success"**。我们 §14 / §15 / §17 引用 Salih 协议时必须诚实标注 "需 thousands of MZI 才 >95%" · 当前 chip 物理上 N=6 max (Calafell)。
+
+**CAVEAT 4 · Heralding efficiency 限制 wall-clock cost**
+
+Calafell 2019 heralding efficiency **~3%**。CFE 算法 wall-clock cost model 应该是:
+
+$$T_{\text{wall}} = \frac{B_\delta(f)}{\text{rate}_{\text{source}} \cdot \eta_{\text{heralding}} \cdot \eta_{\text{detection}}}$$
+
+3% heralding × 90% detection = ~2.7% system efficiency · 即每个理论 oracle call 实际 wall-clock $\sim$ 37 个 photon period。§07 复杂度章节应加 wall-clock cost discussion。
+
+**CAVEAT 5 · Chained MZI visibility 累乘衰减**
+
+Single MZI visibility 99.94% · chained N 时累乘 $(0.9994)^N$:
+
+| N | Visibility 累乘 |
+|---|---|
+| 6 | 99.64% |
+| 20 | 98.81% |
+| 100 | 94.18% |
+| 1000 | 54.69% (CFC 已 broken) |
+
+N=100+ 时 visibility 已经 dominate violation rate · 这是 Salih scheme "thousands of elements" 的物理瓶颈来源。
+
+### 核心瓶颈总结
+
+loss + visibility + heralding 三者共同决定 effective $N$ 上限。当前 multi-object IFM 实测 $N = 5$ (Franco 2026) · chained CFC 实测 $N = 6$ (Calafell 2019)。两者都 **6 倍以内**于 12-mode platform capability · 但 **指数 / 多项式倍**远于很多算法理论上要求的 $10^6+$。
+
+### 跟早期论文 §03.9 / §05.3 数字的 reconciliation
+
+| 早期 claim | 实测对账 | 论文修订 |
+|---|---|---|
+| "N=12 lab proven" | N=12 是 Ascella platform mode 数 · multi-object IFM 实测 N=5 | §03.9 重写 (已完成) · 区分 hardware capability vs IFM object 数 |
+| "5 dB end-to-end loss" | 3 dB per facet · 系统总 efficiency ~2.7% | §03.9 重写 (已完成) |
+| ">99% efficiency 单链路" | single MZI visibility 99.94% · 不是 chained protocol success | §03.9 重写 (已完成) · 区分单 MZI vs chained |
 
 ## 11.3 · 应用层限界
 

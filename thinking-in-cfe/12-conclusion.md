@@ -4,7 +4,7 @@
 
 ## 12.1 · 本论文做了什么
 
-本论文把过去 30 余年分散的 IFM/counterfactual computation 文献 [Elitzur-Vaidman 1993] [Mitchison-Jozsa 2001] [Lin-Lin 2015] [Filatov-Auzinsh 2024] [Hance 2025] 系统化为一个**算法-工程-应用框架**:
+本论文把过去 30 余年分散的 IFM/counterfactual computation 文献 [Elitzur-Vaidman 1993] [Mitchison-Jozsa 2001] [Lin-Lin 2015] [Filatov-Auzinsh 2024] [Franco-Camillini-Galvão 2026] 系统化为一个**算法-工程-应用框架**:
 
 - **算子定义** (§3) · $\Phi^{CF}_f$ 的形式定义 + 子算子目录 + 算法层接口
 - **组合代数** (§4) · 5 种基础组合 + cost composition theorem 草案 + programming model 草案

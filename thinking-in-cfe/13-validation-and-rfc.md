@@ -55,7 +55,7 @@
 **待验证声明 5 · §3 R1/R2/R3 三性质的物理实现可能性**
 
 - **声明**:存在物理 protocol 同时实现 R1 (触发率任意小) + R2 (adversary 不可检测) + R3 (输入不消耗)
-- **需要的验证**:文献 [Hance 2025] 单点验证 + 需要更多团队独立复现
+- **需要的验证**:文献 [Franco-Camillini-Galvão 2026] 单点验证 + 需要更多团队独立复现
 - **审稿请求**:量子光学实验学者 · 特别是 IFM 实验组
 - **证伪条件**:发现物理上某两条性质互斥 (e.g. R1 和 R2 在 $\delta < $ 某阈值时无法同时满足)
 
@@ -123,7 +123,7 @@
 **待验证声明 13 · §8 算法模板的实际可执行性**
 
 - **声明**:CPA / CBB 等模板可以在现有 photonic 硬件 (N ≤ 32) 上跑通
-- **需要的验证**:在 [Hance 2025] 同类硬件或其他 universal photonic processor 上实际跑通至少一个模板 · 公开结果
+- **需要的验证**:在 [Franco-Camillini-Galvão 2026] 同类硬件或其他 universal photonic processor 上实际跑通至少一个模板 · 公开结果
 - **审稿请求**:量子算法实验组
 - **证伪条件**:在现有硬件上跑模板时遇到不可调和的工程问题 · 算法层假设不成立
 
@@ -155,7 +155,7 @@
 **待验证声明 17 · A1 NAND-tree 算法的 photonic 实物可行性**
 
 - **声明**:NAND-tree 量子算法 [Farhi 2008] 可以在 N=8-16 photonic IFM 上跑通
-- **需要的验证**:在 [Hance 2025] 类硬件上跑小规模 NAND-tree · 公开数据
+- **需要的验证**:在 [Franco-Camillini-Galvão 2026] 类硬件上跑小规模 NAND-tree · 公开数据
 - **审稿请求**:量子算法 + photonic 实验合作组
 - **证伪条件**:跑出来跟理论复杂度差异大 → 算法 + 硬件配对有问题
 
@@ -194,7 +194,7 @@
 | arxiv quant-ph | 全文 · 预印 + 公开 review |
 | Quantum (open-access journal) | 适合论文最终提交版 |
 | Physical Review X | 适合论文最终提交版 |
-| Nature Communications | 跟 [Hance 2025] 同 venue |
+| Nature Communications | 跟 [Franco-Camillini-Galvão 2026] 同 venue |
 
 ### 工程社区
 
@@ -231,7 +231,7 @@
 - Q-E1 · §3.9 报告的 SOTA 参数 (5 dB loss · 95% visibility · N=12) 是否准确?
 - Q-E2 · §11.2 关于 N=100 时 loss 不可用的预测是否过悲观?
 - Q-E3 · 嵌套 cascade 控制策略 (§4.4) 哪个在你的平台最可行?
-- Q-E4 · 跟 [Hance 2025] 类硬件跑 §8 算法模板有什么 practical 困难?
+- Q-E4 · 跟 [Franco-Camillini-Galvão 2026] 类硬件跑 §8 算法模板有什么 practical 困难?
 
 ### 给算法学者
 

@@ -169,13 +169,46 @@ OUTCOME: 核材料 / 高价值商品的 chain-of-custody 验证机制失效
 
 | 旧 mental model (密码学界默认) | 新 mental model (CFE-aware) |
 |---|---|
-| "probe 必产生物理可检测扰动" | "probe 可以反事实 · 物理上无扰动" |
-| "tamper-evident 物理 sensor 是终极防线" | "物理 sensor 可被 R2 旁路" |
-| "audit log 完整覆盖所有 access" | "反事实 access 不被 log 捕获" |
-| "honey token 触碰 = 攻击信号" | "honey token 可被识别再绕开" |
-| "Eve 必须 commit 到一次具体 probe" | "Eve 可以反事实 probe · 不 commit" |
+| "probe 必产生物理可检测扰动" | "probe 可以反事实 · 物理扰动 bounded by δ" |
+| "tamper-evident 物理 sensor 是终极防线" | "物理 sensor 可被 R2 旁路 with violation prob ~δ" |
+| "audit log 完整覆盖所有 access" | "反事实 access 不被 log 捕获 (大概率)" |
+| "honey token 触碰 = 攻击信号" | "honey token 可被识别再绕开 (subject to violation rate)" |
+| "Eve 必须 commit 到一次具体 probe" | "Eve 可以反事实 probe · 不 commit (with bounded detection prob)" |
 
-这个 shift 影响**几十种**广泛部署的安全协议 · 是真正的 paradigm-level 颠覆 · 即使没有任何具体数学算法被 break。
+### ⚠️ 重要 caveat (物理审计 2026-06-20 落地)
+
+**R2 "adversary undetectable" 不是绝对 0 · 是 bounded by physical violation rate**:
+
+Calafell et al. 2019 npj Quantum Information 5:61 实测 chained CFC N=6, M=320 photons per bit 时:
+
+- **Counterfactual violation: 2.4%** (即 attacker 有 2.4% 概率留下可检测 trace)
+- Single MZI visibility: 99.94% (chained 累乘 $(0.9994)^6 = 99.64\%$)
+- CFC violation 随 N 改善 (Salih scheme 1000+ MZI 时 violation < 0.1%)
+
+精确 R2 表述应为:
+
+$$\eta(\delta, N) = \Pr[\text{adversary detects probe}] \leq c \cdot (1 - V)^N + \delta$$
+
+其中 $V$ 是 single MZI visibility · $N$ 是 chained 数 · $c$ 是常数 · $\delta$ 是触发概率 budget。
+
+**对密码学界的实际含义**:R2 mental shift **方向上正确** · 但 attack 不是 perfect stealth · 是 "violation rate << classical detection rate (100%)"。
+
+类比:Differential cryptanalysis 给 attacker 概率 advantage · 不是确定性 break。R2 给 attacker 概率 stealth advantage · 不是确定性 invisibility。
+
+**实际威胁评估**:
+
+| 场景 | 防御方可检测 attacker 的概率 | 是否 still 严重威胁 |
+|---|---|---|
+| 经典 probe (无 CFE) | 100% (每次 probe 必检测) | baseline |
+| CFE probe N=6 (Calafell SOTA) | ~2.4% (per query) | ✅ 严重 · 防御方 sampling 才能检测 |
+| CFE probe N=100 (理论) | ~0.06% | ✅ 极严重 · 实际无法检测 |
+| CFE probe N=1000 (Salih) | < 0.01% | ✅ 完美 stealth (但需 thousands of MZI) |
+
+3 个 attack 在 N=6 SOTA 下都 still actionable · 因为防御方需要持续 sampling 才能见到 2-3% violation · 一次 successful attack 完成提取 → 替换 → 退出 · 防御方很可能错过 sampling 窗口。
+
+### 整体 paradigm-level 影响 (修订后)
+
+这个 shift 影响**几十种**广泛部署的安全协议 · 是真正的 paradigm-level 颠覆 · 即使没有任何具体数学算法被 break · **即使 attack 不是 perfect stealth · 而是 99% stealth at SOTA**。
 
 ## 15.6 · 跟现有 quantum cryptanalysis 的对比
 

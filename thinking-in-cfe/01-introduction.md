@@ -12,7 +12,7 @@
 
 2015 年,Lin 与 Lin 把这一思想形式化为 **炸弹查询复杂度** $B(f)$ [Lin-Lin 2015],并证明 $B(f) = \Theta(Q(f)^2)$ —— 其中 $Q(f)$ 是任意 Boolean 函数 $f$ 的标准量子查询复杂度。
 
-2024-2025 年,Filatov-Auzinsh 提出 **多对象 IFM** 配置 [Filatov-Auzinsh 2024],Hance 等人在通用集成光子处理器上实物实现 [Hance 2025]。
+2024-2025 年,Filatov-Auzinsh 提出 **多对象 IFM** 配置 [Filatov-Auzinsh 2024],Franco · Camillini · Galvão在通用集成光子处理器上实物实现 [Franco-Camillini-Galvão 2026]。
 
 经过 30 余年发展,IFM/counterfactual 在物理层面已经成熟 · 但**算法学家与行业工程师几乎从未把它当作可用工具**。原因有三:
 
@@ -32,7 +32,7 @@
 
 **(3) 3 维超越点分析 (§5)**:把 "我们超越 FT QC 吗?" 这个模糊问题拆成 D1/D2/D3 三个独立维度,明确我们在 D3 (interface domain) 上**永久独占**外部物理 oracle 的查询能力。
 
-**(4) 减法计算范式 (§6)**:命名并定位一个跟传统加法计算正交的算法构造哲学。强调:"Subtractive" 这个词在 LLM reasoning [Yang 2026] 和 counterfactual psychology [Roese 1993] 已有不同含义 · 我们使用 "**Subtractive Computation Paradigm**" 全称严格指代基于 CFE 算子的算法构造方式 · 避免歧义。
+**(4) 减法计算范式 (§6)**:命名并定位一个跟传统加法计算正交的算法构造哲学。强调:"Subtractive" 这个词在 LLM reasoning [Tang et al. 2026] 和 counterfactual psychology [Roese 1993] 已有不同含义 · 我们使用 "**Subtractive Computation Paradigm**" 全称严格指代基于 CFE 算子的算法构造方式 · 避免歧义。
 
 **(5) 多维复杂度分析 (§7)**:除了经典的 query complexity · 我们引入两个新维度:**disturbance complexity** ($\delta$-bounded) 与 **adversary observability complexity** (undetectability budget) · 在新的 Pareto 边界上讨论 CFE 的位置。
 
