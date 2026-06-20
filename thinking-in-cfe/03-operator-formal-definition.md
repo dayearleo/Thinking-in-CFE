@@ -36,7 +36,9 @@ $$\Pr\left[O_i \text{ 在求值期间被物理触发}\right] \leq \delta$$
 
 $$B_\delta(f) = O\left(\frac{Q(f)^2}{\delta}\right)$$
 
-其中 $Q(f)$ 是 $f$ 的标准量子查询复杂度 [Lin-Lin 2015]。
+其中 $Q(f)$ 是 $f$ 的标准量子查询复杂度。
+
+**注 · δ-参数化扩展明示** (audit 2026-06-20 落地):本公式是 [Lin-Lin 2015] 原版 $B(f) = \Theta(Q(f)^2)$ 的显式 $\delta$-参数化扩展 · 在 $\delta \to 0$ 极限下还原 Lin-Lin 原版。Lin-Lin 模型本身**没有** $\delta$ 参数 (隐含 $\delta \to 0$ 极限 · 给 $\Theta$ tight bound)。我们引入 $\delta$ 作为显式 trigger probability 参数 · 把 $\Theta$ 放宽为 $O$ 上界 · 让算子在 $\delta > 0$ finite trigger budget 下可工程化。Lin-Lin 原模型见 arXiv:1410.0932 · CCC 2015 · ToC 12(18) 2016 · doi:10.4086/toc.2016.v012a018。
 
 ## 3.3 · 关键参数
 
@@ -63,14 +65,27 @@ $$B_\delta(f) = O\left(\frac{Q(f)^2}{\delta}\right)$$
 
 | 算子符号 | $f$ | 语义 | 代价 $B_\delta(f)$ |
 |---|---|---|---|
-| $\Phi^{CF}_{\text{OR}}$ | $\bigvee_i x_i$ | 至少一个 $x_i = 1$? | $O(\sqrt{N}/\delta)$ |
-| $\Phi^{CF}_{\text{AND}}$ | $\bigwedge_i x_i$ | 全部 $x_i = 1$? | $O(\sqrt{N}/\delta)$ |
-| $\Phi^{CF}_{\text{NOR}}$ | $\neg\bigvee_i x_i$ | 全部 $x_i = 0$? · Wheeler 推广原型 | $O(\sqrt{N}/\delta)$ |
+| $\Phi^{CF}_{\text{OR}}$ | $\bigvee_i x_i$ | 至少一个 $x_i = 1$? | $O(N/\delta)$ |
+| $\Phi^{CF}_{\text{AND}}$ | $\bigwedge_i x_i$ | 全部 $x_i = 1$? | $O(N/\delta)$ |
+| $\Phi^{CF}_{\text{NOR}}$ | $\neg\bigvee_i x_i$ | 全部 $x_i = 0$? · Wheeler 推广原型 | $O(N/\delta)$ |
 | $\Phi^{CF}_{\text{MAJ}}$ | majority | 多数为 1? | $O(N/\delta)$ |
-| $\Phi^{CF}_{\text{COUNT}}$ | $\sum_i x_i$ | 多少个 1? | $O(\sqrt{N \cdot \text{ans}}/\delta)$ |
-| $\Phi^{CF}_{\text{T}_t}$ | threshold $\geq t$ | 至少 $t$ 个为 1? | $O(\sqrt{Nt}/\delta)$ |
-| $\Phi^{CF}_{\text{LOC}}$ | locate first 1 | 哪个 $i$ 是第一个 1? | $O(\sqrt{N}/\delta)$ 期望 |
-| $\Phi^{CF}_{\text{NAND-tree}}$ | balanced NAND-tree | 平衡 NAND-tree 评估 | $O(\sqrt{N}/\delta)$ |
+| $\Phi^{CF}_{\text{COUNT}}$ | $\sum_i x_i$ | 多少个 1? | $O(N \cdot \text{ans}/\delta)$ |
+| $\Phi^{CF}_{\text{T}_t}$ | threshold $\geq t$ | 至少 $t$ 个为 1? | $O(Nt/\delta)$ |
+| $\Phi^{CF}_{\text{LOC}}$ | locate first 1 | 哪个 $i$ 是第一个 1? | $O(N/\delta)$ 期望 |
+| $\Phi^{CF}_{\text{NAND-tree}}$ | balanced NAND-tree | 平衡 NAND-tree 评估 | $O(N/\delta)$ |
+
+**注 · 公式修正** (audit 2026-06-20 落地):上表 cost 公式来自 P3 主公式 $B_\delta(f) = O(Q(f)^2/\delta)$ + 各 $f$ 的标准量子查询复杂度 $Q(f)$:
+
+| $f$ | $Q(f)$ | $Q(f)^2$ | $B_\delta(f) = O(Q(f)^2/\delta)$ |
+|---|---|---|---|
+| OR | $\Theta(\sqrt{N})$ (Grover) | $\Theta(N)$ | $O(N/\delta)$ |
+| AND | $\Theta(\sqrt{N})$ | $\Theta(N)$ | $O(N/\delta)$ |
+| MAJ | $\Theta(\sqrt{N})$ | $\Theta(N)$ | $O(N/\delta)$ |
+| COUNT (k=ans) | $\Theta(\sqrt{N \cdot \text{ans}})$ | $\Theta(N \cdot \text{ans})$ | $O(N \cdot \text{ans}/\delta)$ |
+| T_t | $\Theta(\sqrt{Nt})$ | $\Theta(Nt)$ | $O(Nt/\delta)$ |
+| NAND-tree | $\Theta(\sqrt{N})$ (Farhi 2008) | $\Theta(N)$ | $O(N/\delta)$ |
+
+[Lin-Lin 2015] 给出 OR / AND / specific 函数的 tighter special-case bound (例如 OR 可达 $O(N/\log^2 N \cdot 1/\delta)$) · 上表给的是 generic 上界。具体函数的精确 bound 见 [Lin-Lin 2015] §3-§5。
 
 ## 3.6 · 算法层接口
 

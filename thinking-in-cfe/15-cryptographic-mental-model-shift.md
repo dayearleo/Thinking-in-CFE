@@ -245,6 +245,34 @@ CFE 跟 Shor 攻击**完全正交** · 攻击的是密码协议堆栈中**完全
 
 这等于 post-quantum cryptography 之后的 **post-counterfactual cryptography (PCC)** —— 一个新的密码学子领域。
 
+### ⚠️ PCC vs CQC 命名 disambiguation (audit 2026-06-20 落地)
+
+**重要**:本论文 PCC 提议跟已有 17 年 active 子领域 **Counterfactual Quantum Cryptography (CQC)** 命名邻近 · 必须显式区分。
+
+**CQC** (自 [Noh 2009] PRL 103.230501 起 · 详 §02.4.1):
+
+- **方向**:用 counterfactual 性质**构造** cryptographic protocol
+- **范畴**:QKD-like 协议 · sender-receiver 信息传输 without physical particle transit
+- **代表工作**:[Noh 2009] / [Yin 2010] / [Liu 2012a,b] / [Semi-CQBC 2020] / [CFC trace-free 2023]
+- **17 年 active line**
+
+**PCC** (本论文提议):
+
+- **方向**:用 counterfactual 性质**防御** cryptographic attack
+- **范畴**:tamper-evident hardware 跟 R2 stealth probe 之间的 adversary model
+- **代表攻击**:本论文 §15.4 三个 worked example + §16 17 算法 audit
+- **post-quantum 风格 · 新提议**
+
+**两者关系**:正交研究方向 · 使用同一物理基础 (IFM / Salih scheme / Quantum Zeno) · 但应用方向相反。CQC 把 counterfactual 当 *primitive* 构造协议 · PCC 把 counterfactual 当 *threat* 设计 adversary model。共同构成 "**counterfactual-aware cryptography**" 完整图景。
+
+**命名候选** (如 reviewer / 标准化机构觉得 PCC 易混淆):
+
+- Counterfactual-Resistant Cryptography (CRC) · 类比 Quantum-Resistant Cryptography
+- Anti-Counterfactual Cryptography (Anti-CC)
+- Counterfactual-Aware Cryptography (CAC)
+
+本论文当前 stable 使用 **PCC** · 但邀请 RFC 阶段 community discussion 决定终态命名。
+
 ## 15.8 · 工程化路径 · 实现这些攻击需要什么
 
 ### 攻击 A (HSM) 工程化条件

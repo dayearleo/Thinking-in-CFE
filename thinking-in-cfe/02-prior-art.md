@@ -45,9 +45,29 @@ IFM/counterfactual 思想在过去 30 余年沿三条互相交叉的线发展:
 | [Theory of coherent IFM 2023] · arxiv 2307.05214 | 三级系统 IFM 理论形式化 |
 | [Quantum causal counterfactuals 2024] · arxiv 2302.11783 · Quantum journal | Pearl 因果反事实在量子框架的形式化 (注:**这跟我们的算子是不同范畴** · 那是因果推断 · 我们是计算原语) |
 
+## 2.4.1 · Counterfactual Quantum Cryptography (CQC) 子领域 · 17 年 active line (2009-2026 · audit 2026-06-20 加入)
+
+**重要**:Counterfactual Quantum Cryptography (CQC) 自 [Noh 2009] 起是 17 年 active 子领域 · 用反事实性质**构造** cryptographic protocol (QKD-like)。**跟我们 §15 PCC 命名邻近但研究方向正交** · 必须显式 disambiguate。
+
+| 工作 | 贡献 |
+|---|---|
+| [Noh 2009] · PRL 103.230501 · "Counterfactual Quantum Cryptography" · DOI 10.1103/PhysRevLett.103.230501 | **CQC 起源** · 提出用 counterfactual 性质做 QKD-like 密钥分发 |
+| [Yin 2010] · Z.-Q. Yin et al. · PRA 82.042335 · "Security of counterfactual quantum cryptography" | CQC security proof |
+| [Liu 2012a] · PRA 86.022313 · "Counterfactual quantum cryptography based on weak coherent states" | CQC 推到 weak coherent state regime |
+| [Liu 2012b] · PRL 109.030501 · "Experimental Demonstration of Counterfactual Quantum Communication" | CQC 首次实验 demo (PNAS 2017 后续 chained Zeno) |
+| [Semi-CQBC 2020] · Sci Rep · "Semi-Counterfactual Quantum Bit Commitment Protocol" · doi 10.1038/s41598-020-62893-0 | CQC 推到 bit commitment 应用 |
+| [CFC trace-free 2023] · npj Quantum Info · doi 10.1038/s41534-023-00756-y | CQC 无 weak trace 实验 |
+
+**CQC vs PCC 正交关系** (详 §15.9 修订):
+
+- **CQC** (Counterfactual Quantum Cryptography) · 用 counterfactual 性质**构造** cryptographic protocol (sender-receiver 信息传输 without physical particle transit · QKD-like)
+- **PCC** (Post-Counterfactual Cryptography · 本论文 §15.9 提议) · 用 counterfactual 性质**防御** cryptographic attack (R2 stealth probe bypass tamper-evident hardware · post-quantum-style)
+
+两者使用同一物理基础 (IFM / Salih scheme · Quantum Zeno) · 但应用方向相反:CQC 把 counterfactual 当 *primitive* · PCC 把 counterfactual 当 *threat*。共同构成 "counterfactual-aware cryptography" 完整图景。
+
 ## 2.5 · 邻近但不重叠的工作
 
-为防止读者混淆 · 列出 4 类**容易跟我们工作混淆但实际范畴不同**的工作:
+为防止读者混淆 · 列出 5 类**容易跟我们工作混淆但实际范畴不同**的工作:
 
 **(A) Pearl 风格因果反事实推断** · 例 [Pearl 2009], [Quantum causal 2024]
 - **它们做什么**:在因果模型里推断 "如果 X 没发生 · Y 会怎样" 的反事实陈述
@@ -61,11 +81,15 @@ IFM/counterfactual 思想在过去 30 余年沿三条互相交叉的线发展:
 - **它们做什么**:给 ML 模型决策生成 "需要改什么才能翻转预测" 的解释
 - **跟我们的差异**:它们用 "counterfactual" 一词指代 ML 解释 · 跟物理 IFM 无关
 
-**(D) "Thinking by Subtraction" / contrastive decoding** · 例 [Yang 2026, arxiv 2602.18232]
-- **它们做什么**:LLM 推理时用对比解码提升正确性
+**(D) "Thinking by Subtraction" / contrastive decoding** · 例 [Tang et al. 2026, arxiv 2602.18232]
+- **它们做什么**:LLM 推理时用对比解码提升正确性 · 在 token 概率层做 "subtraction"
 - **跟我们的差异**:它们用 "subtraction" 指代 token-level 概率运算 · 跟物理减法计算无关
 
-**重要免责**:本论文使用 "**Subtractive Computation Paradigm**" 全称严格指代 §6 定义的基于 CFE 算子的算法构造哲学。读者**不应**将其混同于上述任一邻近概念。
+**(E) Subtraction-free complexity / algebraic complexity** · 例 [Fomin 2013, arxiv 1307.8425] "Subtraction-free complexity, cluster transformations, and spanning trees" (audit 2026-06-20 加入)
+- **它们做什么**:研究在仅允许加 / 乘 (**不**允许减) 的算术电路中评估多项式的复杂度 · 是 algebraic complexity 子领域
+- **跟我们的差异**:它们的 "subtractive" 是符号 / 结构层面 (代数运算约束) · 不是 quantum-physical 层面的反事实 · 跟 SCP 正交
+
+**重要免责**:本论文使用 "**Subtractive Computation Paradigm**" 全称严格指代 §6 定义的基于 CFE 算子的算法构造哲学。读者**不应**将其混同于上述任一邻近概念 (A 因果反事实 / B 心理学 / C ML explainability / D LLM 对比解码 / E algebraic complexity)。
 
 ## 2.6 · 30 年后我们处在什么位置?
 

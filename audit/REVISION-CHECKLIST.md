@@ -49,7 +49,7 @@
 
 ## 2 · ⏳ P0 必修 (3 项 · 投学术 venue 前必修)
 
-### ⏳ P0-3 · §02 加 [Noh 2009] CQC 17 年子领域 + disambig
+### ✅ P0-3 · §02 加 [Noh 2009] CQC 17 年子领域 + disambig (DONE · §02.4.1 加 6 entries + §15.7 PCC vs CQC disambig + 命名候选)
 
 **问题**:Counterfactual Quantum Cryptography (CQC) 自 [Noh 2009] PRL 103.230501 起 17 年 active 子领域 · 我们 PCC 命名跟 CQC 冲突。
 
@@ -97,7 +97,7 @@ cryptography" 完整图景。
 
 **工作量**:~25 行 + 1 个决策 (改名 vs 保留 PCC + disambig)
 
-### ⏳ P0-4 · §03.2 P3 加 δ-extension 明示
+### ✅ P0-4 · §03.2 P3 加 δ-extension 明示 (DONE · 加 "注 · δ-参数化扩展明示" 段)
 
 **问题**:我们 $B_\delta(f) = O(Q(f)^2/\delta)$ 是 [Lin-Lin 2015] 原版 $B(f) = \Theta(Q(f)^2)$ 的 δ-参数化扩展 · 论文未明示。
 
@@ -127,7 +127,7 @@ $$B_\delta(f) = O\left(\frac{Q(f)^2}{\delta}\right)$$
 
 **工作量**:~5 行
 
-### ⏳ P0-5 · §03.5 子算子 4 公式漏平方修复
+### ✅ P0-5 · §03.5 子算子 4 公式漏平方修复 (DONE · 4 公式 √N → N + 加 Q(f)² 推导表 + Lin-Lin special-case 引用)
 
 **问题**:从 $B_\delta(f) = O(Q(f)^2/\delta)$ 推 · 4 个公式漏平方:
 
@@ -148,7 +148,7 @@ $$B_\delta(f) = O\left(\frac{Q(f)^2}{\delta}\right)$$
 
 ## 3 · ⏳ P1 应修 (5 项 · 论文 robust)
 
-### ⏳ P1-1 · §06.1 加第 5 类 algebraic disambig (Fomin 2013)
+### ✅ P1-1 · §06.1 加第 5 类 algebraic disambig (Fomin 2013) (DONE · 在 §02.5 (E) 加 Fomin 2013 + 5 类完整免责)
 
 **问题**:§06.1 当前 4 类邻近 disambig (LLM / 心理学 / ML / 因果) · 漏第 5 类 algebraic complexity 子领域。
 
