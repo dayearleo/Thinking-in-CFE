@@ -100,10 +100,10 @@ claim registry 列出后必须**逐条**审 · 不允许 "重要的审 · 次要
 
 | 引擎 | 何时用 | 配额 |
 |---|---|---|
-| **EXA** `api.exa.ai/search` | 主力 · 语义搜 + 学术 (arxiv / PMC / journals) | 已 verified key |
-| **Serper** `google.serper.dev` | Google / Scholar 严肃文献 / 公司白皮书 | 已 verified key |
-| **Jina** `r.jina.ai/<url>` | 直接抓 URL · markdown 化全文 | 已 verified key |
-| arxiv API | EXA 漏 paper 时直接 `arxiv.org/api/query` | 公开 |
+| **EXA** `api.exa.ai/search` | 主力 · 语义搜 + 学术 (arxiv / PMC / journals) | 需自备 · sign up: exa.ai · 设 `${EXA_API_KEY}` |
+| **Serper** `google.serper.dev` | Google / Scholar 严肃文献 / 公司白皮书 | 需自备 · sign up: serper.dev · 设 `${SERPER_API_KEY}` |
+| **Jina** `r.jina.ai/<url>` | 直接抓 URL · markdown 化全文 | 需自备 · sign up: jina.ai · 设 `${JINA_API_KEY}` |
+| arxiv API | EXA 漏 paper 时直接 `arxiv.org/api/query` | 公开 · 无需 key |
 
 详 `~/.claude/skills/search-tools/references/full-sop.md` 降级链。
 

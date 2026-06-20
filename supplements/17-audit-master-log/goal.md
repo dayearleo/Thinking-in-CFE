@@ -53,7 +53,7 @@
 
 ```bash
 # Step 1 · 检查上轮欠债
-cd "<your-clone-path>/Thinking-in-CFE"
+cd "<your-clone-path>/Thinking-in-CFE"  # 替换为你 git clone 后的实际本地路径
 grep -L 'status:' audit/claims/*/assessment.md 2>/dev/null
 # ↑ 如果输出非空 · 有 half-done claim · 必先收尾再开新
 
@@ -95,7 +95,7 @@ mkdir -p audit/claims/AUD-XXX/sources
 # (顶部 Total/UNVERIFIED/CONFIRMED 等数字 update)
 
 # commit
-cd "<your-clone-path>/Thinking-in-CFE"
+cd "<your-clone-path>/Thinking-in-CFE"  # 替换为你 git clone 后的实际本地路径
 git add audit/claims/AUD-XXX/ audit/01-claim-registry.md audit/04-audit-summary.md
 git commit -m "audit: AUD-XXX through AUD-YYY (10 claims audited)"
 ```
@@ -152,7 +152,10 @@ git commit -m "audit: AUD-XXX through AUD-YYY (10 claims audited)"
 
 ---
 
-## 8 · 搜索工具 curl 模板 (含 key · 详 02-keyword-matrix.md §1)
+## 8 · 搜索工具 curl 模板 (env var · 详 02-keyword-matrix.md §0+§1)
+
+> **前置**:需先 sign up 各家拿 key + 设 env var · 详 `02-keyword-matrix.md §0`:
+> `export EXA_API_KEY="<your-key>"` / `export SERPER_API_KEY="<your-key>"` / `export JINA_API_KEY="<your-key>"`
 
 ### EXA · 主力
 

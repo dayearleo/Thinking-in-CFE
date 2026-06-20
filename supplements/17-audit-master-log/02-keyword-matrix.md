@@ -5,15 +5,25 @@
 
 ---
 
-## 0 · 三引擎 API key (已 verified · 可直接用)
+## 0 · 三引擎 API key (你需自备 · 各家有免费 tier)
 
-| 引擎 | endpoint | key |
-|---|---|---|
-| EXA | `https://api.exa.ai/search` | `${EXA_API_KEY}` |
-| Serper | `https://google.serper.dev/search` | `${SERPER_API_KEY}` |
-| Jina | `https://r.jina.ai/<url>` | `${JINA_API_KEY}` |
+下面所有 curl 模板假设你已设好 3 个 env var · 你需要自己 sign up 各家拿 key:
 
-详 `~/.claude/skills/search-tools/references/full-sop.md`。
+| 引擎 | endpoint | env var | sign-up 入口 |
+|---|---|---|---|
+| EXA | `https://api.exa.ai/search` | `${EXA_API_KEY}` | https://exa.ai |
+| Serper | `https://google.serper.dev/search` | `${SERPER_API_KEY}` | https://serper.dev |
+| Jina | `https://r.jina.ai/<url>` | `${JINA_API_KEY}` | https://jina.ai |
+
+设 env var:
+
+```bash
+export EXA_API_KEY="<your-exa-key>"
+export SERPER_API_KEY="<your-serper-key>"
+export JINA_API_KEY="<your-jina-key>"
+```
+
+或写进你的 `~/.zshrc` / `~/.bashrc` 永久生效。
 
 ---
 
