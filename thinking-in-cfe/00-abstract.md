@@ -2,7 +2,14 @@
 
 [← 返回 README](README.md)
 
-我们提出 **反事实函数求值算子** $\Phi^{CF}_f$ (Counterfactual Function Evaluation Operator, **CFE**),把 Elitzur-Vaidman 干涉无相互作用测量 [Elitzur-Vaidman 1993] 与 Mitchison-Jozsa 反事实计算 [Mitchison-Jozsa 2001] 的物理思想抽象为可工程化的算法原语。
+> *"We are participators in bringing into being not only the near and here but the far away and long ago."*
+> — John Archibald Wheeler, 1978
+
+本工作的**思想起航起点**是 Wheeler 1978 延迟选择思想实验 [Wheeler 1978] 提出的 **"participatory universe"** 哲学命题 — 物理实在的内容由测量配置决定 · 而不由写入时机决定。
+
+我们沿这一哲学起源 · 把 Elitzur-Vaidman 1993 干涉无相互作用测量 [Elitzur-Vaidman 1993] 与 Mitchison-Jozsa 2001 反事实计算 [Mitchison-Jozsa 2001] 的物理思想抽象为可工程化的算法原语 **反事实函数求值算子** $\Phi^{CF}_f$ (Counterfactual Function Evaluation Operator · **CFE**)。
+
+(*Wheeler ↔ CFE 是 **哲学/概念 lineage** · 不是 **物理实现 lineage** · 详 §02 prior-art + audit/THEORY-ADJUSTMENTS-MASTER-REPORT.md 的 3 层 honest disclaimer。*)
 
 算子定义于三条性质:
 

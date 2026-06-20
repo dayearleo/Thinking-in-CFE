@@ -426,3 +426,46 @@ Cleanup:
 ## 9 · 版本
 
 - 2026-06-20 v1 · 初版 · 整合 audit/07 + THEORY-ADJUSTMENTS-MASTER + hook 提示 · 一目了然 checklist
+- 2026-06-20 v2 · 加 §10 Post-RFC publish 后续修订 + C-4 Wheeler abstract gap
+
+---
+
+## 10 · Post-RFC publish 后续修订 (ongoing · push 到 GitHub 之后的二次修订)
+
+### ✅ C-4 · §00 abstract 加 Wheeler 1978 思想起航 attribution (DONE)
+
+**问题**(user verbatim 2026-06-20):"Readme 中完全没谈到我们的起点 · 惠勒延迟选择实验" + "论文本身,如何安置惠勒延迟实验?那的确是我们思想起航的起点"。
+
+**根因**:论文本体 §01.1 起源 / §02.2 prior-art / §03.5 算子表 / §06 减法范式 / §99 references 5 处已 properly place Wheeler · 但 **§00 abstract 完全没提 Wheeler** — abstract 直接从 EV 1993 + MJ 2001 切入 · 错过 narrative arc。这是 paper-level high-visibility 入口的 gap (arxiv 摘要页 / IACR 摘要页 / Google Scholar 摘要都用 §00 abstract)。
+
+**修订位置**:`thinking-in-cfe/00-abstract.md` L1-L5。
+
+**修订内容** (方案 A + B 组合):
+
+- 方案 B · 加 Wheeler 原话 epigraph (学术 paper 经典手法 · 类比 Bell 1964 / Pearl 2009 用法)
+- 方案 A · 第 1 段改为 "本工作的思想起航起点是 Wheeler 1978 ... · 我们沿这一哲学起源把 EV 1993 + MJ 2001 物理思想抽象为算法原语 CFE"
+- 加 honest disclaimer 3 层 lineage 指针:Wheeler ↔ CFE 是哲学/概念 lineage · 不是物理实现 lineage
+
+**Commit**:(本轮 push 含)
+
+### ✅ C-5 · README hero section 加 Wheeler 精神起点 sub-section (DONE)
+
+**问题**:hero section 之前用 EV 1993 起 · 漏 Wheeler。
+
+**修订**:见 commit `0109ade` (本地 · 待 push) · 加 "### 精神起点 · Wheeler 1978" sub-section + 起点-演化-我们做的 三栏表。
+
+---
+
+## 11 · Meta-task · 未来修订必走 narrative arc cross-check (新加 2026-06-20)
+
+### Meta-task M5 · README ↔ Paper narrative arc 一致性 cross-check
+
+**触发**:任何时候改 paper § 或 README hero section · 必跑 narrative arc 一致性 audit:
+
+1. **grep audit**:`grep -nE "Wheeler|Elitzur|Mitchison|Lin-Lin|Calafell|Franco" README.md thinking-in-cfe/00-abstract.md thinking-in-cfe/01-introduction.md` 看 5 个关键 attribution 在 3 个入口文件 (README + abstract + introduction) 是否一致
+2. **narrative arc 检查**:opening hook 是 Wheeler 还是 EV 1993?3 个文件应该一致
+3. **3 层 lineage disclaimer 检查**:物理实现 vs 哲学 vs 实验技术 — 3 个文件都应该有 honest 区分(至少有 pointer 到 audit/THEORY-ADJUSTMENTS-MASTER-REPORT.md)
+
+**为什么这是 M5**:audit M1-M4 是 claim-level 元规则 · M5 是 narrative-level 元规则 · 防止 paper / README / abstract 之间出现 narrative arc 断裂。
+
+**实证起源**:2026-06-20 user verbatim 抓到 README hero section 漏 Wheeler + abstract 漏 Wheeler 两次连续 narrative arc gap · 立此 meta-task 防止未来重蹈。
