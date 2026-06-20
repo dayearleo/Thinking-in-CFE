@@ -3,9 +3,10 @@ title: "Thinking in CFE: A Counterfactual Function Evaluation Paradigm for Photo
 message: "If you use this work, please cite as below."
 type: article
 authors:
-  - family-names: "[作者待补]"
-    given-names: "[作者待补]"
-    orcid: "[ORCID 待补]"
+  - family-names: "壮哥"
+    alias: "dayearleo"
+    email: "dayearleo@proton.me"
+    affiliation: "Independent researcher"
 abstract: >
   We introduce the Counterfactual Function Evaluation operator (CFE) Φ^{CF}_f, abstracting
   30+ years of Interaction-Free Measurement (IFM) and counterfactual computation literature
@@ -15,8 +16,8 @@ abstract: >
   fault-tolerant quantum computing that can be challenged today with specialized photonic
   IFM hardware. We further analyze CFE attacks on 17 industrially deployed cryptographic
   algorithms and propose Post-Counterfactual Cryptography (PCC) as a new subfield.
-repository: "[GitHub URL 待补]"
-url: "[paper landing page 待补]"
+repository: "https://github.com/dayearleo/Thinking-in-CFE"
+url: "https://github.com/dayearleo/Thinking-in-CFE"
 date-released: 2026-06-19
 license: CC-BY-4.0
 version: "0.1-draft"
@@ -32,7 +33,7 @@ preferred-citation:
   type: article
   title: "Thinking in CFE: A Counterfactual Function Evaluation Paradigm for Photonic Computation"
   authors:
-    - family-names: "[作者待补]"
-      given-names: "[作者待补]"
+    - family-names: "壮哥"
+      alias: "dayearleo"
   year: 2026
-  notes: "Draft v0.1, June 2026. arxiv preprint: [TBD]"
+  notes: "Draft v0.2 (audit-revised), June 2026. arxiv preprint: [TBD]"
