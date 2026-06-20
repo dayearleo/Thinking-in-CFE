@@ -6,13 +6,30 @@
 
 ## 一句话摘要
 
-我们把 Elitzur-Vaidman 干涉无相互作用测量 (1993) 跟 Mitchison-Jozsa 反事实计算 (2001) 的物理思想抽象为算法原语 **CFE** (Counterfactual Function Evaluation Operator) · 构造组合代数 · 命名 **减法计算范式 (SCP)** · 提出 **PCC** (Post-Counterfactual Cryptography) 新密码学子领域 · 用 **12 个可跑 Python simulator (60 unit tests 全 pass)** 演示同构方法论。
+精神起点是 **Wheeler 1978 延迟选择思想实验** —— "我们参与了过去事件的形成"。从 Wheeler 1978 → Elitzur-Vaidman 1993 (IFM 形式化) → Mitchison-Jozsa 2001 (counterfactual computation 命名) → Lin-Lin 2015 (bomb query 复杂度上界) → Calafell 2019 / Franco-Camillini-Galvão 2026 (集成 photonic 实验)。
+
+本工作把这条 30 年理论与实验脉络的物理思想抽象为算法原语 **CFE** (Counterfactual Function Evaluation Operator) · 构造组合代数 · 命名 **减法计算范式 (SCP)** · 提出 **PCC** (Post-Counterfactual Cryptography) 新密码学子领域 · 用 **12 个可跑 Python simulator (60 unit tests 全 pass)** 演示同构方法论。
 
 > **本论文经过 230 claim 全审 + 5 个 surgical 修订 commit · 物理基础经 PhD-level synthesis (Hance 2023 Bristol) + critical paper (Frumkin-Bush 2023) 双轮 audit · 完整 audit 落档在 `audit/` 目录 · §18 audit-report 是论文一部分。** RFC stage · 邀请证伪。
 
 ## TL;DR · 给 CS 朋友的 30 秒概览
 
 **这是什么**:把 30 年量子物理实验 (Interaction-Free Measurement · IFM) 抽象为算法学家可直接调用的算子代数 · **IFM 的 "MapReduce 时刻"**。
+
+### 精神起点 · Wheeler 1978 "我们参与了过去事件的形成"
+
+整个工作的精神起点是 **John Archibald Wheeler 1978 提出的延迟选择思想实验** (delayed-choice experiment):
+
+> 光子已经离开 BS1 (第一分束器) 之后 · 你才决定是否放 BS2 (第二分束器)。
+> 实验结果显示:光子的过去行为 (走粒子路径还是波路径) 是由你**未来**的选择决定的。
+>
+> Wheeler 原话:**"我们参与了过去事件的形成"** (We are participators in bringing about something of the universe in the distant past)。
+
+CFE 算子的本质 = 把 Wheeler 这种 "**参与而不真正交互**" 的 quantum 现象 · 从思想实验 + 桌面光学 demo · 抬到 algorithm primitive 层 · 让算法学家不必懂量子光学也能调用 quantum-only 能力。
+
+| 起点 | 演化 | 我们做的 |
+|---|---|---|
+| **Wheeler 1978** · 哲学命题 ("参与过去") | Elitzur-Vaidman 1993 IFM 形式化 → Mitchison-Jozsa 2001 counterfactual computation → Salih 2013 chained CFC → Lin-Lin 2015 bomb query · Calafell 2019 + Franco 2026 集成 photonic 实验 | 把这条 30 年脉络抽象为 algorithm primitive · 构造算子代数 · 命名新计算范式 · 发现工业密码学物理假设层被绕过 |
 
 ### 3 件不可能但都是真的事
 
@@ -67,7 +84,7 @@ Heartbleed / Spectre 是 specific 漏洞 · 我们这是**跨硬件类的 paradi
 
 ### 一句话定位
 
-> 我们**不发明**新物理 · 我们**做** IFM 30 年既有物理工作的 **"MapReduce 时刻"** — 把它抬到 algorithm primitive 层 · 让算法学家不必懂量子光学也能调用 quantum-only 能力 · 并发现这件事顺带把工业密码学的物理假设层全部抬到 reviewer 面前。
+> 我们**不发明**新物理 · 我们**做** Wheeler 1978 → Elitzur-Vaidman 1993 → 30 年 IFM 既有物理工作的 **"MapReduce 时刻"** — 把 Wheeler 的"参与而不真正交互"命题从思想实验抬到 algorithm primitive 层 · 让算法学家不必懂量子光学也能调用 quantum-only 能力 · 并发现这件事顺带把工业密码学的物理假设层全部抬到 reviewer 面前。
 
 ## 仓库结构
 
