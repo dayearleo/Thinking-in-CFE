@@ -8,6 +8,8 @@
 
 我们把 Elitzur-Vaidman 干涉无相互作用测量 (1993) 跟 Mitchison-Jozsa 反事实计算 (2001) 的物理思想抽象为算法原语 **CFE** (Counterfactual Function Evaluation Operator) · 构造组合代数 · 命名 **减法计算范式 (SCP)** · 提出 **PCC** (Post-Counterfactual Cryptography) 新密码学子领域 · 用 **12 个可跑 Python simulator (60 unit tests 全 pass)** 演示同构方法论。
 
+> **本论文经过 230 claim 全审 + 5 个 surgical 修订 commit · 物理基础经 PhD-level synthesis (Hance 2023 Bristol) + critical paper (Frumkin-Bush 2023) 双轮 audit · 完整 audit 落档在 `audit/` 目录 · §18 audit-report 是论文一部分。** RFC stage · 邀请证伪。
+
 ## 仓库结构
 
 ```
@@ -18,12 +20,26 @@
 ├── CONTRIBUTING.md            ← RFC 流程 / falsification 提交规范
 ├── .gitignore
 │
-├── thinking-in-cfe/           ← 主论文 · 17 章 · 4166 行
+├── thinking-in-cfe/           ← 主论文 · 19 章 + README + refs
 │   ├── README.md              ←   论文导航 + 摘要
 │   ├── 00-abstract.md
 │   ├── 01-introduction.md
 │   ├── ... (02-17)
-│   └── 99-references.md       ←   50+ 条标准化引用
+│   ├── 18-audit-report.md     ←   230 claim 全审报告 (本论文一部分)
+│   └── 99-references.md       ←   60+ 条标准化引用 (含 L1 PhD synthesis + L2 CQC + M Fomin)
+│
+├── audit/                     ← 230 claim 全审落档 · 单点真理源
+│   ├── 00-master-plan.md      ←   方法论 (M1-M4 元规则 + 7 步流程)
+│   ├── 01-claim-registry.md   ←   230 claim 表 + status
+│   ├── 04-audit-summary.md    ←   整体 status 分布 + Top 20 发现
+│   ├── 05-gap-report.md       ←   24 个 Gap + 6 优先级
+│   ├── 06-novelty-defense.md  ←   11 NOVEL 防御 + 7 reviewer 攻击预案
+│   ├── 07-prior-art-corrections.md         ← §02 + §99 修订清单
+│   ├── REVISION-CHECKLIST.md  ←   18 项修订总 checklist (✅ 100% done)
+│   ├── THEORY-ADJUSTMENTS-MASTER-REPORT.md ← 10 部分系统化调整决策
+│   ├── batch-5-B-physics-foundation-DEEP.md
+│   ├── batch-11-physics-via-phd-thesis-and-critical-review.md
+│   └── claims/AUD-XXX/        ←   11 个 sample claim 完整 7 步 audit log
 │
 ├── supplements/               ← 22 个卫星文档 · 含 12 simulator
 │   ├── README.md              ←   supplements 导航
@@ -98,15 +114,28 @@ done
 | **想自己验证 claims** | `supplements/10-cfe-hndl-simulator/` + `12-simulator-validation-report.md` + `15-cfe-bloom-validation-report.md` |
 | **社区贡献新同构** | `supplements/11-isomorphism-catalog-template.md` |
 | **完整精读** | 按章节顺序 + `dev-notes/` 看演化过程 |
+| **审计 reviewer** | `audit/04-audit-summary.md` + `thinking-in-cfe/18-audit-report.md` + `supplements/17-audit-master-log/` |
+| **想看物理 caveat** | `audit/batch-5-B-physics-foundation-DEEP.md` + `audit/batch-11-physics-via-phd-thesis-and-critical-review.md` + `thinking-in-cfe/11-limitations-and-open-problems.md` (6 CAVEAT) |
+| **想看修订决策** | `audit/THEORY-ADJUSTMENTS-MASTER-REPORT.md` (10 部分系统化决策) + `audit/REVISION-CHECKLIST.md` (18 项 ✅) |
 
-## 核心 claim
+## 核心 claim (audit 后 honest 版本)
 
-1. **CFE 是 quantum-only 算子** · 但用专用 photonic 硬件 (集成 IFM chip, [Hance 2025]) 实现 · 不依赖 fault-tolerant quantum computer。
-2. **3 维 transcendence 框架** vs FT QC:D1 capability (FT QC superset) · D2 cost (CFE 便宜 6 数量级) · D3 interface domain (CFE 永久独占 · 外部物理 oracle)。
-3. **减法计算范式 (SCP)** 跟传统加法计算正交 · sparsity / side-effects / verify-without-commit 是杀手锏问题类。
-4. **17 个工业部署密码算法**(DES/AES/SHA/RSA/...)数学层未破 · 但 HSM-stored keys 全部受 CFE-HNDL 攻击影响。
+1. **CFE 是 quantum-only 算子** (在 chained Zeno / multi-object IFM 规模) · 用专用 photonic 硬件实现 (集成 IFM chip [Franco-Camillini-Galvão 2026, arxiv 2604.04691] + [Calafell et al. 2019] MIT SOI nanophotonic) · 不依赖 fault-tolerant quantum computer。
+   - **Honest caveat**:single bomb tester 规模的 R1 quantum-only 论点是 contested in physics community [Frumkin-Bush 2023, PRA 108:L060201] · 详 §11.2 CAVEAT 6
+2. **3 维 transcendence 框架** vs FT QC:D1 capability (FT QC superset) · D2 cost (CFE 便宜 6 数量级 · **N ≤ 10 niche**) · D3 interface domain (CFE 永久独占 · 外部物理 oracle)。
+3. **减法计算范式 (SCP)** 跟传统加法计算正交 · sparsity / side-effects / verify-without-commit 是杀手锏问题类。跟 LLM "subtraction" [Tang et al. 2026] / Pearl 因果反事实 / ML explainability / 认知心理学 / algebraic complexity [Fomin 2013] 5 类邻近概念已 disambiguate。
+4. **17 个工业部署密码算法**(DES/AES/SHA/RSA/...)数学层未破 · 但 HSM-stored keys 全部受 CFE-HNDL 攻击影响 (R2 violation 2.4% per query at N=6 SOTA · 详 §15.5)。
 5. **Universal Hardware Trust Break** · 同一 CFE 攻击模型对 HSM / TPM / 硬件钱包 / EMV / passport / 车载 ECU / satellite 7 类设备**全部有效** · 强制全球 hardware-anchored 信任体系重审。
-6. **12 个 worked example 已端到端做实** (Python simulator + unit tests) · 跨 12 个不同算法子领域。
+6. **12 个 worked example 已端到端做实** (Python simulator + 60 unit tests 全 pass) · 跨 12 个不同算法子领域。
+
+### PCC vs CQC disambiguation
+
+**PCC** (本论文提议)跟已有 17 年 active 子领域 **CQC** (Counterfactual Quantum Cryptography · [Noh 2009] 起源) 命名邻近但研究方向正交:
+
+- **CQC**:用 counterfactual 性质**构造** cryptographic protocol (QKD-like)
+- **PCC**:用 counterfactual 性质**防御** cryptographic attack (R2 stealth bypass tamper-evident hardware)
+
+详 `thinking-in-cfe/02-prior-art.md` §02.4.1 + `thinking-in-cfe/15-cryptographic-mental-model-shift.md` §15.7。
 
 ## RFC 性质
 
@@ -132,17 +161,35 @@ done
 
 详 `CITATION.cff`。
 
-## 状态 · 2026-06-20
+## 状态 · 2026-06-20 (v0.2 audit-revised)
 
-- ✅ 论文主体 17 章 · 4166 行
-- ✅ 22 个 supplement (含 12 simulator)
+### 文档体系
+- ✅ 论文主体 **19 章** (00-17 + §18 audit-report + 99-references)
+- ✅ 22 个 supplement (含 12 simulator · 60 unit tests 全 pass · 3579 行 Python)
 - ✅ 14 个 dev-note (探索 + 同构深化)
-- ✅ 60 unit tests 全 pass · 3579 行 Python
+- ✅ **audit/ 230 claim 全审落档** + supplements/17-audit-master-log/ mirror
 - ✅ 双 license (CC BY 4.0 + MIT)
+
+### 审计 + 修订 (本轮)
+- ✅ **230 claim 全 audited** · CONFIRMED 158 / PARTIAL 58 / REFUTED 3 (已修) / NOVEL 11
+- ✅ **18 项 REVISION-CHECKLIST 100% 完成** (cleanup × 3 + P0 × 3 + P1 × 5 + P2 × 3 + early × 4)
+- ✅ **3 个 attribution cite key 修复** ([Hance 2025] → [Franco-Camillini-Galvão 2026] · [Yang 2026] → [Tang et al. 2026] · [Hance 2019] → [Calafell et al. 2019])
+- ✅ **物理 caveat 完整落地**:§03.9 SOTA 表精确化 (N=12 → N=5 区分) + §11.2 加 6 CAVEAT + §15.5 R2 violation bound + §10 A2/A3/A4 N≤10 niche
+- ✅ **PhD-level + critical paper 加入 prior-art**:Hance 2023 Bristol PhD · Violaris 2025 Oxford DPhil · Frumkin-Bush 2023 (PRA 108:L060201) · Bush 2021 综述 · Hance-Ladyman-Rarity 2021 (Found. Phys. 51:12) · IOP 2024
+- ✅ **CQC 17 年 prior-art disambig**:§02.4.1 加 [Noh 2009] CQC 子领域 6 paper + §15.7 PCC vs CQC 区分
+- ✅ **数学修订**:§03.2 P3 δ-extension 明示 + §03.5 子算子 8 公式漏平方修复 + §02.5 (E) algebraic disambig
+- ✅ **12 simulator README batch SOTA caveat**
+
+### 外推进 (RFC stage · 待用户决策)
 - ⏳ arxiv / IACR ePrint 投稿(等作者 ORCID + 法律 review)
 - ⏳ HSM 厂商 coordinated disclosure(等 90-day grace 计划)
 - ⏳ NIST 公开评论提交
 - ⏳ PCC founder pool 招募
+- ⏳ Push 到 GitHub public (待用户显式同意)
+
+### 14 commit timeline
+
+详 `git log --oneline` · 6 surgical revision commit + 6 audit commit + 1 initial + cleanup。
 
 ## License
 
