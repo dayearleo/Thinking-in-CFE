@@ -108,6 +108,14 @@ counterfactual_eval(
 
 **只有 $\Phi^{CF}_f$ 同时具备 R1 + R2 + R3** —— 这是算子的核心 differentiator。
 
+**重要 caveat** (审计 2026-06-20 落地 · 见 §11 + audit/batch-11):
+
+- **Single bomb tester 规模**:single IFM 的 25% detection statistics 可以在 classical hydrodynamic pilot-wave 系统中模拟 [Frumkin-Bush 2023, PRA 108:L060201]。在这一规模上 · R1 性质 (统计意义) **不严格 quantum-only**
+- **Chained Zeno 规模** (N≥6 chained MZI, Kwiat 1995):需要任意 scale 的 nonlocal wavefunction · 经典 pilot-wave 系统受 finite spatial extent + finite memory 限 · 不可 reproduce
+- **Multi-object IFM 规模** (N≥5 sequential, Franco-Camillini-Galvão 2026):同上 · 全局 entangled probe state · 经典不可
+
+CFE 算子的实际工程 niche (§10 应用) 都假设 N≥2 chained · 在这些规模 R1/R2/R3 differentiator 严格成立。Single bomb tester 规模的 caveat 仅是 honest 标注 · 不影响应用论点。
+
 ## 3.8 · 命名约定
 
 采用双轨命名:

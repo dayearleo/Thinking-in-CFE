@@ -96,6 +96,20 @@
 
 **[Thermal IFM ghost imaging]** · "Thermal Interaction-Free Ghost Imaging Reduces Light Dose" · 2025
 
+### L1 · PhD-level synthesis + critical reviews (2023-2025 · 2026-06-20 audit batch-11 加入)
+
+**[Hance PhD thesis 2023]** · Jonte R. Hance · "The interplay between quantum foundations and quantum technologies: Counterfactual communication, and extensions of quantum mechanics" · University of Bristol Doctoral College PhD thesis · 2023-03-21 · Supervisors: James A C Ladyman + John Rarity · Handle: hdl.handle.net/1983/a3cf0e59-31a9-456f-800e-cd3b6533461b · PDF (7 MB): research-information.bris.ac.uk/files/358656794/20230323_JRHance_PhD_Thesis_PostCorrections.pdf · 涵盖 IFM + CFC + extensions QM 的 PhD-level synthesis
+
+**[Violaris DPhil thesis 2025]** · "Counterfactuals in macroscopic quantum physics: irreversibility, measurement and locality" · University of Oxford Mathematical Institute · MPLS Division · DPhil thesis · 2025-05-20 deposit · Supervisors: Vlatko Vedral + Artur Ekert · Examiners: David Deutsch + Gerardo Adesso · ORA: ora.ox.ac.uk/objects/uuid:8f379ea0-ad38-463e-9d9f-be9b8adc8e85 · constructor theory framework for macroscopic quantum counterfactuals
+
+**[Frumkin-Bush 2023]** · Valeri Frumkin · John W. M. Bush · "Misinference of interaction-free measurement from a classical system" · Phys. Rev. A 108, L060201 (2023-12-12) · DOI: 10.1103/PhysRevA.108.L060201 · 关键 critical paper · classical hydrodynamic pilot-wave system 模拟 single IFM 25% detection statistics · 跟我们 §03.7 R1/R2/R3 differentiator claim 在 single bomb tester 规模上 conflict · 论文 §11.2 CAVEAT 6 已加 disclaimer
+
+**[Bush 2021]** · John W. M. Bush · "Pilot-wave hydrodynamics" · Rep. Prog. Phys. 84:017001 (2021) · DOI: 10.1088/1361-6633/abc22c · 综述 经典 pilot-wave 系统已模拟的多 quantum 现象 · 含 IFM analog · 但限 finite memory + finite spatial extent
+
+**[Hance-Ladyman-Rarity 2021]** · "How Quantum is Quantum Counterfactual Communication?" · Foundations of Physics 51:12 (2021) · arxiv:1909.07530 · DOI: 10.1007/s10701-021-00412-5 · formal argument · CFC protocols proposed so far 必需 quantum (wave-particle duality 必需) · 支持我们 §03.7 R1/R2/R3 differentiator 在 CFC 规模上的论点
+
+**[IOP 2024 Counterfactuality]** · "Counterfactuality, back-action, and information gain in multi-path interferometers" · Quantum Science and Technology (IOPscience) · 2024-07-24 · DOI: 10.1088/2058-9565/ad63c7 · multi-path interferometer 框架的 counterfactuality + back-action 形式分析 · 跟我们 §03.7 R1/R2/R3 + §04 组合代数相关
+
 ### L · Quantum cryptography / 邻近工作
 
 **[Wiesner 1969]** · S. Wiesner · "Conjugate coding" · *ACM SIGACT News* 15(1) · 1983 (writeup of 1969 work) · pp. 78-88

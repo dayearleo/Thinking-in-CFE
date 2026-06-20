@@ -111,6 +111,50 @@ IFM/counterfactual 思想在过去 30 余年沿三条互相交叉的线发展:
 
 本论文不发明新物理 · 但建立**第一个完整的算法-工程-应用框架** · 把 30 年物理工作转化为算法学家与行业工程师可直接调用的工具集。
 
+## 2.7 · PhD-level synthesis + critical reviews (2023-2025)
+
+(本节 2026-06-20 audit 加入 · 跟 audit/batch-11-physics-via-phd-thesis-and-critical-review 对接)
+
+### 完整 PhD thesis 综述
+
+**[Hance PhD thesis 2023]** Jonte R. Hance · "The interplay between quantum foundations and quantum technologies: Counterfactual communication, and extensions of quantum mechanics" · University of Bristol Doctoral College · 2023-03-21 · supervisor James A C Ladyman + John Rarity · Handle.net: hdl.handle.net/1983/a3cf0e59-31a9-456f-800e-cd3b6533461b
+
+7 章 PhD-level synthesis · 涵盖 IFM + counterfactual communication (CFC) + extensions of quantum mechanics + philosophical/foundational issues。**是我们论文 §02 + §03 + §15 内容的 PhD-level reference 综述。** Hance 个人贡献 (Calafell 2019 + 多篇 follow-up) 都收录。
+
+**[Violaris DPhil thesis 2025]** "Counterfactuals in macroscopic quantum physics: irreversibility, measurement and locality" · University of Oxford Mathematical Institute · 2025-05-20 · supervisors Vlatko Vedral + Artur Ekert · examiners David Deutsch + Gerardo Adesso
+
+用 **constructor theory** (Deutsch-Marletto) 框架研究 quantum counterfactuals · 提供我们 §05 D3 论证 (CFE 跟 FT QC categorical 差异) 的 formal foundation。
+
+### 关键 critical paper (must-engage)
+
+**[Frumkin-Bush 2023]** Valeri Frumkin · John W. M. Bush · "Misinference of interaction-free measurement from a classical system" · Phys. Rev. A 108, L060201 (2023-12-12) · DOI 10.1103/PhysRevA.108.L060201
+
+**关键 challenge claim**:在 hydrodynamic pilot-wave 系统 (walking droplet on 7 mm silicon oil at 80 Hz vibration) 上实测 · droplet 25% detection statistics 跟 EV 量子 IFM 25% 等价。论证 single bomb tester 规模的 IFM **可以用经典 pilot-wave 描述** · 不严格 quantum-only。
+
+我们 §03.7 R1/R2/R3 differentiator claim 已加 caveat 跟此 paper align (§11.2 CAVEAT 6)。**重要**:Frumkin-Bush 实测仅限 single bomb tester · 不能 reproduce chained Zeno (Kwiat 1995) 或 multi-object IFM (Franco 2026) · 我们应用 niche 在后者规模 · 论点 not affected。
+
+**[Bush 2021]** John W. M. Bush · "Pilot-wave hydrodynamics" review · Rep. Prog. Phys. 84:017001 (2021)
+
+综述 经典 pilot-wave 系统已模拟的 quantum 现象:single/double-slit · orbital quantization · wavelike statistics in corrals · Friedel oscillations · superradiance · spin lattices · surreal Bohmian trajectories · IFM (Frumkin-Bush 2023)。Bush 综述说明 hydrodynamic analog 在 **finite memory + finite spatial extent** 下 work · 跟量子的 arbitrary scale nonlocal wavefunction 是 fundamental 差异。
+
+### 支持我们 R1/R2/R3 论点的 paper
+
+**[Hance-Ladyman-Rarity 2021]** "How Quantum is Quantum Counterfactual Communication?" · Foundations of Physics 51:12 (2021) · arxiv 1909.07530 · DOI 10.1007/s10701-021-00412-5
+
+verbatim:**"the protocols proposed so far for sending signals that don't involve matter/energy transfer associated with the bits sent must be quantum, insofar as they require wave-particle duality."**
+
+支持我们 §03.7 differentiator 论点 · 至少在 counterfactual communication protocol 规模上 R1 必需 quantum。
+
+### 综合 implication
+
+5 个新 source 跟我们 §02 既有 30 年文献链互补:
+
+- 既有 sources 给**单独 paper-level** 文献 (1993 EV → 2026 Franco)
+- 新加 sources 给 **PhD-level synthesis + critical/foundational review** 视角
+- Frumkin-Bush 2023 critical paper 必 engage · 已在 §03.7 + §11.2 加 caveat
+
+完整审计落档见 `audit/batch-11-physics-via-phd-thesis-and-critical-review.md`。
+
 ---
 
 [← 上一章 · 01 引言](01-introduction.md) · [下一章 · 03 算子形式定义 →](03-operator-formal-definition.md)

@@ -173,7 +173,41 @@ transformations, and spanning trees"。这是 algebraic complexity 子领域 · 
 
 ---
 
-## 修订实施 checklist
+## P0+ 修订 · 物理基础 PhD-level + critical paper audit (batch-11 落地)
+
+### Correction P0-6 · §02 prior-art 加 PhD-level synthesis section (§02.7)
+
+引 6 个新 source:Hance PhD thesis 2023 + Violaris DPhil 2025 + Frumkin-Bush 2023 + Bush 2021 + Hance 2021 + IOP 2024。
+
+**实施**:已完成 (本 batch commit)
+
+### Correction P0-7 · §03.7 R1/R2/R3 differentiator 加 Frumkin-Bush 2023 caveat
+
+明示 single bomb tester 规模 IFM 可以经典模拟 (Frumkin-Bush 2023) · chained Zeno + multi-object IFM 仍 quantum-only · CFE 应用 niche 在 N≥2 chained 规模成立。
+
+**实施**:已完成 (本 batch commit)
+
+### Correction P0-8 · §11.2 加 CAVEAT 6
+
+Frumkin-Bush 2023 hydrodynamic pilot-wave analog 实测 25% droplet detection 跟 EV 量子 IFM 等价 · 提议 falsification 实验 (延长 arm length nλ)。
+
+**实施**:已完成 (本 batch commit)
+
+### Correction P0-9 · §99 加 6 个新 entry (L1 section)
+
+PhD thesis + critical paper 6 个 reference 加到 §99 新 section "L1 · PhD-level synthesis + critical reviews (2023-2025)"。
+
+**实施**:已完成 (本 batch commit)
+
+### Correction P1-4 · §05 D3 加 constructor theory framing (Violaris 2025)
+
+引 Violaris DPhil thesis 2025 · constructor theory (Deutsch-Marletto) 给 D3 论证 formal foundation。
+
+**实施**:待修 (本 batch 未完成 · P1 优先级)
+
+---
+
+## 修订实施 checklist (updated 2026-06-20 batch-11 后)
 
 | Correction | 优先级 | 状态 |
 |---|---|---|
@@ -182,9 +216,14 @@ transformations, and spanning trees"。这是 algebraic complexity 子领域 · 
 | P0-3 加 [Noh 2009] CQC 子领域 | P0 | ⏳ 待修 |
 | P0-4 §03.2 P3 加 δ-extension 说明 | P0 | ⏳ 待修 |
 | P0-5 §03.5 子算子公式漏平方 | P0 | ⏳ 待修 (先 verify Lin-Lin 精确 bound) |
+| **P0-6 §02 加 §02.7 PhD-level synthesis section** | P0 | ✅ **batch-11 commit** |
+| **P0-7 §03.7 加 Frumkin-Bush 2023 caveat** | P0 | ✅ **batch-11 commit** |
+| **P0-8 §11.2 加 CAVEAT 6 (single IFM classical analog)** | P0 | ✅ **batch-11 commit** |
+| **P0-9 §99 加 L1 section 6 个新 entry** | P0 | ✅ **batch-11 commit** |
 | P1-1 §06.1 加第 5 类 algebraic disambig | P1 | ⏳ 待修 |
 | P1-2 §99 year/published 精确化 | P1 | ⏳ 待修 |
 | P1-3 §99 7 模糊 entry 精确化 | P1 | ⏳ 待修 |
+| P1-4 §05 D3 加 constructor theory framing | P1 | ⏳ 待修 |
 | P2-1 §14 Salih caveat | P2 | ⏳ 待修 |
 | P2-2 supplements 一致性 | P2 | ✅ verify OK |
 

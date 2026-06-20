@@ -63,6 +63,23 @@ $$T_{\text{wall}} = \frac{B_\delta(f)}{\text{rate}_{\text{source}} \cdot \eta_{\
 
 3% heralding × 90% detection = ~2.7% system efficiency · 即每个理论 oracle call 实际 wall-clock $\sim$ 37 个 photon period。§07 复杂度章节应加 wall-clock cost discussion。
 
+**CAVEAT 6 · Single IFM 经典 pilot-wave 系统可以模拟 (Frumkin-Bush 2023)**
+
+[Frumkin-Bush 2023, PRA 108:L060201] "Misinference of interaction-free measurement from a classical system" 在 hydrodynamic pilot-wave 系统 demonstrated:
+
+- 7.0 mm silicon oil bath · 80 Hz vibration · walking droplet self-propelled by its own pilot wave
+- 实测 droplet **25% chance** of detection on right side when "bomb" present on left · 跟 EV 量子 IFM 25% 等价
+
+这意味着我们 §03.7 R1/R2/R3 differentiator claim 在 **single bomb tester 规模** 不严格成立 · 必须 caveat:
+
+- **Single IFM (R1 性质)** · 经典 hydrodynamic pilot-wave 可以模拟同一 statistics
+- **Chained Zeno (Kwiat 1995, N≥6)** · 经典不可 (任意 scale nonlocal wavefunction 必需)
+- **Multi-object IFM (Franco 2026, N≥5)** · 经典不可 (全局 entangled probe state 必需)
+
+Frumkin-Bush 2023 提议的 falsification 实验:延长 interferometer arm length nλ · 看 effect 是否 persist。这是物理学界 open question · 我们论文 not affected · 因为应用 niche 都在 chained / multi-object 规模 (N≥2)。
+
+诚实 disclaimer:**单 IFM 的 R1 "quantum-only" 论点是 contested in physics community** · 但 chained / multi-object IFM 的 R1/R2/R3 仍 quantum-only (跟 [Hance-Ladyman-Rarity 2021] "How Quantum is QCC?" Foundations of Physics 51:12 一致)。
+
 **CAVEAT 5 · Chained MZI visibility 累乘衰减**
 
 Single MZI visibility 99.94% · chained N 时累乘 $(0.9994)^N$:
