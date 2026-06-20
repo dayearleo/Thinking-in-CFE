@@ -3,10 +3,9 @@ title: "Thinking in CFE: A Counterfactual Function Evaluation Paradigm for Photo
 message: "If you use this work, please cite as below."
 type: article
 authors:
-  - family-names: "壮哥"
+  - name: "壮哥"
     alias: "dayearleo"
     email: "dayearleo@proton.me"
-    affiliation: "Independent researcher"
 abstract: >
   We introduce the Counterfactual Function Evaluation operator (CFE) Φ^{CF}_f, abstracting
   30+ years of Interaction-Free Measurement (IFM) and counterfactual computation literature
@@ -33,7 +32,7 @@ preferred-citation:
   type: article
   title: "Thinking in CFE: A Counterfactual Function Evaluation Paradigm for Photonic Computation"
   authors:
-    - family-names: "壮哥"
+    - name: "壮哥"
       alias: "dayearleo"
   year: 2026
   notes: "Draft v0.2 (audit-revised), June 2026. arxiv preprint: [TBD]"
