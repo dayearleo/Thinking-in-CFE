@@ -39,6 +39,7 @@
 - [`15-cryptographic-mental-model-shift.md`](15-cryptographic-mental-model-shift.md) · 密码学认知突破 · 在 FT QC 到来之前 (R2 攻击 4 层物理假设 + 3 个 worked attack + Post-Counterfactual Cryptography)
 - [`16-attack-on-deployed-crypto.md`](16-attack-on-deployed-crypto.md) · CFE 对 17 个工业部署密码算法的系统化攻击 (DES/3DES/RC4/IDEA/RC5/Blowfish/AES/ChaCha20/MD5/SHA-1/RSA/DH/EDH/ECC/AES-GCM/ChaCha20-Poly1305 + 3 worked attack + 硬件根信任危机)
 - [`17-isomorphism-methodology.md`](17-isomorphism-methodology.md) · CFE 算子同构方法论 · 5 步发现 SOP · 4 个跨域 worked example (Bloom→PIR / 可达性→Stealth probe / 差分→Rate-limit bypass / Backprop→Federated) · 历史算法宝库的元层视角 · 4 级 specialization L0-L3 · CFE 算子家族目录 vision
+- [`18-audit-report.md`](18-audit-report.md) · 审计报告 · 230 条声明的现实性证明 · 11 个 sample 7 步审 + 219 个 batch reasoned 审 · 整体 68.7% CONFIRMED · 25.2% PARTIAL · 1.3% REFUTED (已修) · 4.8% NOVEL · 跟 `audit/` 目录对接
 - [`99-references.md`](99-references.md) · 参考文献
 
 ## 引用本工作

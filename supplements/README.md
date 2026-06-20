@@ -35,6 +35,7 @@
 | [`30-ray-tracing/`](30-ray-tracing/) | **第 10 个做实** · Ray Tracing → CFE bbox 预筛 · 8K HDR rendering · 3 unit test | 图形学 / GPU 工程 |
 | [`32-spmv/`](32-spmv/) | **第 11 个做实** · Sparse SpMV → CFE row screen · bit-identical 输出 · 4 unit test | HPC / 数值线性代数 |
 | [`34-smith-waterman/`](34-smith-waterman/) | **第 12 个做实** · Smith-Waterman → CFE k-mer 预筛 · cancer genomics · 4 unit test | 生物信息学 / 基因测序 |
+| [`17-audit-master-log/`](17-audit-master-log/) | **审计落档 mirror** · 230 claim 全审 audit log · CONFIRMED 158 / PARTIAL 58 / REFUTED 3 (已修) / NOVEL 11 · 跟主论文 §18 audit-report 1:1 对接 · 11 个 sample claim sources/ + 8 类深度审 batch 文件 | 所有 reviewer · 想验证任何 claim 的人 |
 
 ## 推荐阅读路径
 
