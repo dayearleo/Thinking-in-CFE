@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "Thinking in CFE: A Counterfactual Function Evaluation Paradigm for Photonic Computation"
+message: "If you use this work, please cite as below."
+type: article
+authors:
+  - family-names: "[作者待补]"
+    given-names: "[作者待补]"
+    orcid: "[ORCID 待补]"
+abstract: >
+  We introduce the Counterfactual Function Evaluation operator (CFE) Φ^{CF}_f, abstracting
+  30+ years of Interaction-Free Measurement (IFM) and counterfactual computation literature
+  into a unified algorithmic primitive. Building on this, we develop a composition algebra,
+  name the Subtractive Computation Paradigm (SCP), introduce three new complexity dimensions,
+  catalog 6 algorithm templates, and identify 6 problems currently believed to require
+  fault-tolerant quantum computing that can be challenged today with specialized photonic
+  IFM hardware. We further analyze CFE attacks on 17 industrially deployed cryptographic
+  algorithms and propose Post-Counterfactual Cryptography (PCC) as a new subfield.
+repository: "[GitHub URL 待补]"
+url: "[paper landing page 待补]"
+date-released: 2026-06-19
+license: CC-BY-4.0
+version: "0.1-draft"
+keywords:
+  - counterfactual computation
+  - interaction-free measurement
+  - quantum computing
+  - photonic computing
+  - subtractive computation
+  - quantum cryptanalysis
+  - post-counterfactual cryptography
+preferred-citation:
+  type: article
+  title: "Thinking in CFE: A Counterfactual Function Evaluation Paradigm for Photonic Computation"
+  authors:
+    - family-names: "[作者待补]"
+      given-names: "[作者待补]"
+  year: 2026
+  notes: "Draft v0.1, June 2026. arxiv preprint: [TBD]"

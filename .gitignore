@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS / build artifacts
+Thumbs.db
+*.bak
+
+# Drafts and local-only files (not for GitHub)
+draft/
+local/
+TODO.local.md
