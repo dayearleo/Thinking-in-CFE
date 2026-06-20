@@ -67,6 +67,16 @@
 
 **结论 D2**:CFE 在 D2 上**显著领先** FT QC 约 6 个数量级 · 这一差距在 FT QC 量产前不会消失 · 即使 FT QC 普及后仍然在特定 niche 维持。
 
+### ⚠️ D2 优势的精确 scaling caveat (audit 2026-06-20 落地)
+
+D2 6 数量级优势在 **N ≤ 10 multi-object IFM 规模** 严格成立 (Franco-Camillini-Galvão 2026 实测 N=5 sequential on Quandela Ascella · Calafell et al. 2019 实测 chained CFC N=6 max on MIT SOI photonic chip)。
+
+- **N ≤ 10 规模**:photonic IFM chip ~$50k-150k vs FT QC $10^8-10^{10} · 6 个数量级优势严格成立
+- **N=12-32 规模**:仍可 photonic chip (Quandela Ascella platform mode 数 12) · 但 multi-object IFM efficiency 随 n 衰减 (Franco 2026 verbatim "η is in general a quickly decaying function of n")
+- **N=100+ 规模**:需未来 photonic chip 工艺突破 (光损累积 / chained MZI visibility 99.94% 累乘 / heralding efficiency 3%) · 工程不确定时间表
+
+跟 §10 应用 niche 一致:**CFE 当前应用 niche 应聚焦 N ≤ 10 场景** (例 5 种 binding affinity assay · 5-6 chained CFC · 5 个 RT 加密协议 stealth bypass) · N=20+ 是 open engineering challenge。详 §11.2 CAVEAT 1 + audit/batch-5。
+
 ## 5.4 · D3 · interface domain 对比 (本论文核心超越点)
 
 ### 谁能当 oracle?
@@ -107,6 +117,16 @@ D1 D2 都是程度差异 (FT QC 可以 "更好" / 我们可以 "更便宜")。**
 | DAC/ADC vs CPU | analog-digital 边界控制器 · 即使 FT QC 普及也仍需要 |
 
 **$\Phi^{CF}_f$ 跟 FT QC 的关系类似 sensor 之于 CPU · 不互相替代 · 互相需要**。
+
+### D3 论点的 formal foundation · constructor theory (audit 2026-06-20 落地)
+
+[Violaris DPhil thesis 2025] (University of Oxford · Mathematical Institute · supervisors Vlatko Vedral + Artur Ekert · examiners David Deutsch + Gerardo Adesso) 用 **constructor theory** (Deutsch-Marletto 2015) 框架研究 macroscopic quantum counterfactuals · 给我们 D3 论证 (CFE 跟 FT QC categorical 差异) 提供 **formal foundation**:
+
+- Constructor theory 把物理定律重新表述为 "什么 transformation possible · 什么 impossible" (而非 "什么 happens given initial conditions")
+- 在 constructor theory 框架下 · "FT QC 测量外部物理样本必破坏反事实性" 可形式化为 transformation impossibility 定理
+- Violaris thesis 用 constructor theory + quantum information theory 证明 macroscopic quantum coherence 的 irreversibility / information erasure / measurement counterfactuals 的形式特征
+
+这给本论文 §05.4 的"D3 是 categorical 而非程度差异"提供了 **physics-foundations-side formalization** · 跟 §07.7 CFP 复杂度类提议形成 algorithm-side + physics-side 互补论证。
 
 ## 5.5 · 三个超越点综合
 

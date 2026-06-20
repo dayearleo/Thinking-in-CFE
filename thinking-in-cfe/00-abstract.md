@@ -24,7 +24,7 @@
 
 本文核心论点:
 
-> CFE 算子是 **quantum-only** 的能力 · 但用**远小于 FT QC** 的硬件代价实现 · 且独占 FT QC 永远到不了的 **external physical oracle** interface domain · 把一个原本被认为属于"未来量子计算"的 capability 提前 10-20 年解锁 · 在 6 个具体问题域形成永久或临时的不可替代位置。
+> CFE 算子是 **quantum-only** 的能力 (在 chained Zeno + multi-object IFM 规模 · single bomb tester 规模的 quantum-only 论点是 contested in physics community · 详 §11.2 CAVEAT 6) · 但用**远小于 FT QC** 的硬件代价实现 · 且独占 FT QC 永远到不了的 **external physical oracle** interface domain · 在 **N ≤ 10 multi-object IFM 规模**上把一个原本被认为属于"未来量子计算"的 capability 提前 10-20 年解锁 (N=100+ 规模仍需未来 photonic chip 工艺突破)· 在 6 个具体问题域形成永久或临时的不可替代位置。
 
 本文不是物理论文 (我们不发明新物理) · 是 **算法-工程-应用** 的抽象与综述论文 · 第一次把 30 年分散的 IFM / counterfactual computation 文献系统化为可被算法学家与行业专家直接调用的工具集。
 

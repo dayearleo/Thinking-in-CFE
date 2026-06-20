@@ -48,11 +48,11 @@
 
 **[Lin-Lin 2015]** · C. Y.-Y. Lin, H.-H. Lin · "Upper Bounds on Quantum Query Complexity Inspired by the Elitzur-Vaidman Bomb Tester" · *CCC 2015* / *Theory of Computing* 12(18) · 2016 · pp. 1-35 · arxiv:1410.0932 · doi:10.4086/toc.2016.v012a018
 
-**[Belovs 2019]** · A. Belovs · "Quantum Speedup Based on Classical Decision Trees" · arxiv:1905.13095 · 2019
+**[Belovs 2019]** · A. Belovs · "Quantum Speedup Based on Classical Decision Trees" · arxiv:1905.13095 · 2019 · published *Quantum* journal q-2020-03-02-241 (2020)
 
 ### F · 多对象 IFM
 
-**[Filatov-Auzinsh 2024]** · A. Filatov, M. Auzinsh · "Setup for interaction-free measurement of multiple objects" · 2024
+**[Filatov-Auzinsh 2024]** · Stanislav Filatov, Marcis Auzinsh · "Setup for interaction-free measurement of multiple objects using single quantum probe" · *Applied Physics B* 130:121 · 2024 · Department of Physics University of Latvia · ADS bibcode 2024ApPhB.130..121F
 
 ### G · 多路 Wheeler delayed-choice
 
@@ -62,11 +62,11 @@
 
 ### H · NAND-tree quantum algorithm
 
-**[Farhi 2008]** · E. Farhi, J. Goldstone, S. Gutmann · "A Quantum Algorithm for the Hamiltonian NAND Tree" · *Theory of Computing* 4(8) · 2008 · pp. 169-190
+**[Farhi-Goldstone-Gutmann 2008]** · Edward Farhi, Jeffrey Goldstone, Sam Gutmann · "A Quantum Algorithm for the Hamiltonian NAND Tree" · *Theory of Computing* 4(8) · 2008 · pp. 169-190 · arxiv:quant-ph/0702144 (v1 2007-02-14)
 
-**[Childs 2009]** · A. M. Childs, R. Cleve, S. P. Jordan, D. Yonge-Mallo · "Discrete-Query Quantum Algorithm for NAND Trees" · *Theory of Computing* 5(5) · 2009 · pp. 119-123 · arxiv:quant-ph/0702160
+**[Childs-Cleve-Jordan-Yonge-Mallo 2009]** · Andrew M. Childs, Richard Cleve, Stephen P. Jordan, David Yonge-Mallo · "Discrete-Query Quantum Algorithm for NAND Trees" · *Theory of Computing* 5(5) · 2009 · pp. 119-123 · arxiv:quant-ph/0702160 · Note (short paper)
 
-**[Reichardt 2010]** · B. W. Reichardt · "A nearly optimal discrete query quantum algorithm for evaluating NAND formulas" · arxiv:0704.3628
+**[Reichardt 2010]** · Ben W. Reichardt · "Span-Program-Based Quantum Algorithm for Evaluating Formulas" · STOC 2010 (Proceedings 42nd ACM Symposium on Theory of Computing) · also *Theory of Computing* Vol. 8 Article 13 (2012) · doi:10.4086/toc.2012.v008a013 · arxiv:0704.3628
 
 ### I · IFM 平台扩展
 
@@ -90,7 +90,7 @@
 
 **[QuantIC consortium]** · Quantum Technology Hub for Quantum Enhanced Imaging · UK · https://www.quantic.ac.uk/
 
-**[QIUP 2025]** · "Quantum undetected optical projection tomography" · arxiv:2501.05381
+**[QIUP 2025]** · Quantum Imaging with Undetected Photons (QIUP) 是技术 line · 跨多 paper · 起源 [Lemos 2014] *Nature* 512:409 · 综述见 *Quantum Sci. Technol.* 2022/2023 · 本论文具体引 "Quantum undetected optical projection tomography" · arxiv:2501.05381 (2025-01)
 
 **[Mid-IR IFM 2025]** · "Mid-IR hyperspectral imaging with undetected photons" · arxiv:2507.07861
 
@@ -112,19 +112,37 @@
 
 ### L · Quantum cryptography / 邻近工作
 
-**[Wiesner 1969]** · S. Wiesner · "Conjugate coding" · *ACM SIGACT News* 15(1) · 1983 (writeup of 1969 work) · pp. 78-88
+**[Wiesner 1969/1983]** · Stephen Wiesner · "Conjugate Coding" · *ACM SIGACT News* 15(1) · 1983 (manuscript written c. 1969-1970) · pp. 78-88 · doi:10.1145/1008908.1008920 (cite year 修正:2026-06-20 audit · published 1983 · written 1969-1970 · BB84 引用惯例为 [Wiesner 1983])
 
-**[Gottesman 2002]** · D. Gottesman · "Quantum cryptography from a passive eavesdropper detection scheme" · 2002
+**[Barnum et al. 2002]** · Howard Barnum, Claude Crepeau, Daniel Gottesman, Adam Smith, Alain Tapp · "Authentication of Quantum Messages" · Proc. 43rd FOCS · IEEE · 2002 · pp. 449-458 · arxiv:quant-ph/0205128 (cite key 修正:2026-06-20 audit · 早期论文版本 cite 为 [Gottesman 2002] · 实际 FOCS 2002 paper 第 1 作者是 Barnum)
 
-**[Gottesman 2003]** · D. Gottesman · "Quantum tamper-evident encryption" · 2003
+**[Gottesman 2003]** · Daniel Gottesman · "Uncloneable Encryption" · *Quantum Information and Computation* 3(6) · 2003 · pp. 581-602 · arxiv:quant-ph/0210062 (submitted 2002-10)
 
-**[Lord 2024]** · S. Lord · "Relating Quantum Tamper-Evident Encryption to Other Cryptographic Notions" · arxiv:2411.02742 · 2024
+**[Lord 2024]** · Sébastien Lord et al. · "Relating Quantum Tamper-Evident Encryption to Other Cryptographic Notions" · arxiv:2411.02742 · 2024 · 79 pages · 形式化 QTE ↔ encryption / quantum money / revocation 之间的归约
 
 **[Goyal-Raizes 2025]** · V. Goyal, J. Raizes · "Proofs of No Intrusion" · arxiv:2510.06432 · 2025
 
 **[Can't Touch This 2020]** · B. van der Vecht, X. Coiteux-Roy, B. Skorić · "Can't Touch This: unconditional tamper evidence from short keys" · arxiv:2006.02476
 
-### M · 量子因果反事实 (邻近但范畴不同)
+### L2 · Counterfactual Quantum Cryptography (CQC) 子领域 · 2009-2026 (audit 2026-06-20 加入 · §02.4.1 + §15.7 disambig 用)
+
+**[Noh 2009]** · Tae-Gon Noh · "Counterfactual Quantum Cryptography" · *Phys. Rev. Lett.* 103, 230501 · 2009 · doi:10.1103/PhysRevLett.103.230501 · CQC 起源 paper
+
+**[Yin 2010]** · Zhen-Qiang Yin, Han-Wei Li, Wei Chen, Zheng-Fu Han, Guang-Can Guo · "Security of counterfactual quantum cryptography" · *Phys. Rev. A* 82, 042335 · 2010
+
+**[Liu 2012a]** · X. Liu et al. · "Counterfactual quantum cryptography based on weak coherent states" · *Phys. Rev. A* 86, 022313 · 2012
+
+**[Liu 2012b]** · Y. Liu et al. · "Experimental Demonstration of Counterfactual Quantum Communication" · *Phys. Rev. Lett.* 109, 030501 · 2012
+
+**[Cao 2017]** · Yuan Cao et al. · "Direct counterfactual communication via quantum Zeno effect" · *Proc. Natl. Acad. Sci.* 114:4920-4924 · 2017 · CQC chained Zeno 实验
+
+**[Semi-CQBC 2020]** · "Semi-Counterfactual Quantum Bit Commitment Protocol" · *Scientific Reports* · 2020 · doi:10.1038/s41598-020-62893-0
+
+### M · 算法范式邻近 (audit 2026-06-20 加入 · §02.5 (E) 类 disambig 用)
+
+**[Fomin 2013]** · Sergey Fomin · "Subtraction-free complexity, cluster transformations, and spanning trees" · arxiv:1307.8425 · 2013 · algebraic complexity 子领域 · 符号/结构层"subtractive" · 跟我们 SCP 正交
+
+### N · 量子因果反事实 (邻近但范畴不同)
 
 **[Pearl 2009]** · J. Pearl · *Causality: Models, Reasoning, and Inference* · 2nd ed. · Cambridge University Press · 2009
 
